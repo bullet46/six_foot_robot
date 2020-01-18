@@ -1,8 +1,7 @@
 import cv2 as cv
 import numpy as np
 import math
-
-# from framework import data_
+from framework import data_
 
 # 初始脚的位置
 foot_roots = [[100, 60], [100, -60], [0, -90], [0, 90], [-100, 60], [-100, -60]]
@@ -69,17 +68,19 @@ class foot():  # 六足机器人，足类
 
 def create_image():  # 生成图像
     img = np.zeros((1024, 1024, 3), np.uint8)
+    cv.imshow("image", img)
     state = 0  # 用于记录目前状态
-    mode = input("请选择移动模式")  # 0指平动，1指转动
+    mode = input("请选择移动模式:")  # 0指平动，1指转动
     step_length = 40
     step_times = 1
-    angle = input("请选择移动角度")
+    angle = input("请选择移动角度:")
     group_0 = [0, 2, 4]
     group_1 = [1, 3, 5]
     for i in range(0, 6):
         locals()['foot_' + str(i)] = foot(foot_angle[i], foot_roots[i], foot_x[i])
         locals()['foot_' + str(i)].draw(img)
     while 1:
+        img = np.zeros((1024, 1024, 3), np.uint8)
         group_root = []
         group_back = []
         angle_date = []  # 输出角度值
@@ -118,21 +119,17 @@ def create_image():  # 生成图像
             locals()['foot_' + str(i)].length_caculate()
             angle_date.append(locals()['foot_' + str(i)].angle)
             length_date.append(locals()['foot_' + str(i)].x)
-        print(angle_date)
-        print(length_date)
+            print(angle_date)
+            print(length_date)
         cv.imshow("image", img)
-        img = np.zeros((1024, 1024, 3), np.uint8)
-
 
 #      img = np.zeros((1024, 1024, 3), np.uint8)
-
-
-# for i in range(-720,720):
-#     foot1 = foot(i,origin([0,0]),100)
-#     foot1.draw(img)
-#     print(i)
-#     cv.imshow("image",img)
-#     cv.waitKey(0)
+#        for i in range(-720,720):
+#             foot1 = foot(i,origin([0,0]),100)
+#             foot1.draw(img)
+#             print(i)
+#             cv.imshow("image",img)
+#             cv.waitKey(0)
 
 
 create_image()
