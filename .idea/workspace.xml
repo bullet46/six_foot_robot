@@ -26,14 +26,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\six_foot_robot\framework" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.spider_object">
     <configuration name="circle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="six_foot_robot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,7 +97,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="math" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="spider_object" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="six_foot_robot" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -105,11 +105,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/重构逻辑" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\six_foot_robot\framework\math.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/重构逻辑/spider_object.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.spider_object" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.init" />
         <item itemvalue="Python.circle" />
         <item itemvalue="Python.stastic" />
-        <item itemvalue="Python.math" />
       </list>
     </recent_temporary>
   </component>
@@ -175,26 +175,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="184" key="#Postfix_Completion" timestamp="1579708383543">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="184" key="#Postfix_Completion/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579708383543" />
     <state x="679" y="138" key="#stastic" timestamp="1579355486918">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="679" y="138" key="#stastic/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579355486918" />
-    <state width="1899" height="150" key="GridCell.Tab.0.bottom" timestamp="1579702776929">
+    <state width="1899" height="150" key="GridCell.Tab.0.bottom" timestamp="1579708324526">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="150" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579702776929" />
-    <state width="1899" height="150" key="GridCell.Tab.0.center" timestamp="1579702776929">
+    <state width="1899" height="150" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579708324526" />
+    <state width="1899" height="150" key="GridCell.Tab.0.center" timestamp="1579708324526">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="150" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579702776929" />
-    <state width="1899" height="150" key="GridCell.Tab.0.left" timestamp="1579702776929">
+    <state width="1899" height="150" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579708324526" />
+    <state width="1899" height="150" key="GridCell.Tab.0.left" timestamp="1579708324526">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="150" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579702776929" />
-    <state width="1899" height="150" key="GridCell.Tab.0.right" timestamp="1579702776929">
+    <state width="1899" height="150" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579708324526" />
+    <state width="1899" height="150" key="GridCell.Tab.0.right" timestamp="1579708324526">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="150" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579702776929" />
+    <state width="1899" height="150" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579708324526" />
     <state width="1899" height="352" key="GridCell.Tab.1.bottom" timestamp="1579599245422">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -211,14 +215,18 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="352" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579599245422" />
-    <state x="299" y="188" width="998" height="709" key="SettingsEditor" timestamp="1579601118870">
+    <state x="299" y="188" width="998" height="709" key="SettingsEditor" timestamp="1579704894261">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="299" y="188" width="998" height="709" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579601118870" />
+    <state x="299" y="188" width="998" height="709" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579704894261" />
     <state x="640" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1579598727836">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="640" y="349" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579598727836" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1579706694434">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579706694434" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
