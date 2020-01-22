@@ -28,6 +28,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\six_foot_robot\framework" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="circle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="six_foot_robot" />
@@ -174,22 +179,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="679" y="138" key="#stastic/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579355486918" />
-    <state width="1899" height="150" key="GridCell.Tab.0.bottom" timestamp="1579702453669">
+    <state width="1899" height="150" key="GridCell.Tab.0.bottom" timestamp="1579702776929">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="150" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579702453669" />
-    <state width="1899" height="150" key="GridCell.Tab.0.center" timestamp="1579702453669">
+    <state width="1899" height="150" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579702776929" />
+    <state width="1899" height="150" key="GridCell.Tab.0.center" timestamp="1579702776929">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="150" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579702453669" />
-    <state width="1899" height="150" key="GridCell.Tab.0.left" timestamp="1579702453668">
+    <state width="1899" height="150" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579702776929" />
+    <state width="1899" height="150" key="GridCell.Tab.0.left" timestamp="1579702776929">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="150" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579702453668" />
-    <state width="1899" height="150" key="GridCell.Tab.0.right" timestamp="1579702453669">
+    <state width="1899" height="150" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579702776929" />
+    <state width="1899" height="150" key="GridCell.Tab.0.right" timestamp="1579702776929">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="150" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579702453669" />
+    <state width="1899" height="150" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579702776929" />
     <state width="1899" height="352" key="GridCell.Tab.1.bottom" timestamp="1579599245422">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
