@@ -1,7 +1,6 @@
-import math
 import cv2 as cv
 import numpy as np
-from framework import data_
+from 初始脚本 import math
 
 
 def trans(coordinates):

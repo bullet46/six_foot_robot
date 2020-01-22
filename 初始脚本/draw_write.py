@@ -1,7 +1,6 @@
 import cv2 as cv
 import numpy as np
-import math
-from framework import data_
+from 初始脚本 import math
 
 # 初始脚的位置
 foot_roots = [[100, 60], [100, -60], [0, -90], [0, 90], [-100, 60], [-100, -60]]

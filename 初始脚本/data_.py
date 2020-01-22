@@ -1,6 +1,4 @@
-import math
-import numpy as np
-import matplotlib.pyplot as plt
+from 初始脚本 import math
 
 joint_between = 50  # 第一关节间距
 first_arm_length = 75  # 第一手臂长度

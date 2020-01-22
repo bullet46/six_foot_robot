@@ -1,5 +1,4 @@
-import math
-import stastic
+from 初始脚本 import stastic
 
 trans_toradian = stastic.trans_to_radian()
 
