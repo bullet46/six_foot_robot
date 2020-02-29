@@ -44,7 +44,10 @@ def length_height_ex():  # 穷举出定义域(舵机旋转角度)范围内所有
     return lists_all
 
 
-def angle_12_ex(lists):  # 输入一个列表，返回高度与长度相关的舵机角度字典
+def angle_12_ex(lists):
+    """
+    输入一个列表，返回高度与长度相关的舵机角度字典，穷举出限定宽高条件下最适于移动的舵机角度，只需运行一次，将结果保存
+    """
     dic_all = {}
     for l in range(0, 375):
         print(l)
@@ -60,16 +63,29 @@ def angle_12_ex(lists):  # 输入一个列表，返回高度与长度相关的�
     return dic_all
 
 
+def find_angle(length, height, dic: dict):
+    try:
+        return dic[str(length) + '_' + str(height)]
+    except:
+        return None
+
+
 if __name__ == "__main__":
     # lists = length_height_ex()  # 如果length_height_ex有内容改动，请运行该3行刷新数据
-    #    with open("angle_l&h.json", "w") as fp:
-    #        fp.write(json.dumps(lists))
-    with open("angle_l&h.json", "r") as fp:
-        lists = json.load(fp)
-    #print(lists[90][0 + 45])  # 这里加45是因为第二关节定义域初始点是从-45开始的
-    #    with open('l&h_angle.josn', 'w') as fp:
-    #       fp.write(json.dumps(angle_12_ex(lists)))
-    with open('l&h_angle.josn', 'r') as fp:
+    # with open("angle_l&h.json", "w") as fp:
+    #     fp.write(json.dumps(lists))
+    # with open("angle_l&h.json", "r") as fp:
+    #   lists = json.load(fp)
+    # print(lists[90][0 + 45])  # 这里加45是因为第二关节定义域初始点是从-45开始的
+    # with open('l&h_angle.josn', 'w') as fp:
+    #    fp.write(json.dumps(angle_12_ex(lists)))
+    with open('l&h_angle.json', 'r') as fp:
         dic = json.load(fp)
-    print(dic['141_92'])
-    print(lists[135][-30+45])
+    for i in range(-255, 255):  # 用于找出在指定高度下，允许活动的最大自由度
+        temp = []
+        for t in range(0, 375):
+            back = find_angle(t, i, dic)
+            if back != None:
+                temp.append(t)
+        if len(temp) != 0:
+            print('在{}高度下，具有{}种长度，最长为{}，最短为{}'.format(i, len(temp), temp[-1], temp[0]))
