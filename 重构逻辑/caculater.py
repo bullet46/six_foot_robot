@@ -3,6 +3,7 @@
 '''
 from math import *
 import numpy as np
+import json
 from init import *
 
 
@@ -17,12 +18,58 @@ def foot_position(root: list, angle, length, forward):  # 给定原点坐标，�
     return [int(root[0] + cos(radian) * length), int(root[1] + sin(radian) * length)]
 
 
-def six_roots(position: list, forwards):  # 给定机器人中心位置，机器人面朝方向，计算机器人6个根节点坐标
-    orignal = np.array([[-58, 98], [58, 98], [88, 0], [58, -98], [-58, -98], [-88, 0]])
+def six_roots(position: list, forwards):  # 给定机器人中心位置，机器人面朝方向，计算机器人摄像头位置以及6个根节点坐标
+    orignal = np.array([[0, 50], [-58, 98], [58, 98], [88, 0], [58, -98], [-58, -98], [-88, 0]])
     trans = np.array([[cos(radians(forwards - 90)), sin(radians(forwards - 90))],
                       [cos(radians(forwards)), sin(radians(forwards))]], np.float64)  # 2*2的变换基底矩阵
     lists = []
-    for i in range(6):
+    for i in range(7):
         roots = list(np.inner(trans, orignal[i, :].T).astype(int))
         lists.append([roots[0] + position[0], roots[1] + position[1]])
     return lists
+
+
+def length_height_ex():  # 穷举出定义域(舵机旋转角度)范围内所有距离与高的结果，返回二维列表，对应值代表某角度下的长与高
+    angle_1_limit = [0, 180]
+    angle_2_limit = [-45, 135]
+    lists_all = []
+    for i in range(angle_1_limit[0], angle_1_limit[1] + 1):
+        lists = []
+        for n in range(angle_2_limit[0], angle_2_limit[1] + 1):
+            length = first_arm_length * sin(radians(i)) - second_arm_length * cos(radians(i + n)) + joint_between
+            height = first_arm_length * cos(radians(i)) + second_arm_length * sin(radians(i + n))
+            lists.append([length, height])
+        print(i)
+        lists_all.append(lists)
+    return lists_all
+
+
+def angle_12_ex(lists):  # 输入一个列表，返回高度与长度相关的舵机角度字典
+    dic_all = {}
+    for l in range(0, 375):
+        print(l)
+        for h in range(-225, 225):
+            temp = []
+            for t in range(len(lists)):
+                for i in range(len(lists[t])):
+                    if abs(lists[t][i][0] - l) <= 1 and abs(lists[t][i][1] - h) <= 1:
+                        temp = [t, i - 45]
+            if len(temp) != 0:
+                dic_all.update({str(str(l) + '_' + str(h)): temp})
+                print({str(str(l) + '_' + str(h)): temp})
+    return dic_all
+
+
+if __name__ == "__main__":
+    # lists = length_height_ex()  # 如果length_height_ex有内容改动，请运行该3行刷新数据
+    #    with open("angle_l&h.json", "w") as fp:
+    #        fp.write(json.dumps(lists))
+    with open("angle_l&h.json", "r") as fp:
+        lists = json.load(fp)
+    #print(lists[90][0 + 45])  # 这里加45是因为第二关节定义域初始点是从-45开始的
+    #    with open('l&h_angle.josn', 'w') as fp:
+    #       fp.write(json.dumps(angle_12_ex(lists)))
+    with open('l&h_angle.josn', 'r') as fp:
+        dic = json.load(fp)
+    print(dic['141_92'])
+    print(lists[135][-30+45])
