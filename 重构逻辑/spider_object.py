@@ -1,10 +1,12 @@
 """
 定义一个spider类，用于绘制六足+机器人
 """
+
 import cv2 as cv
 import numpy as np
 from init import *
 from math import *
+
 
 
 class Leg(object):

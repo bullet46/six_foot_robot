@@ -1,4 +1,4 @@
-import openpyxl
+#import openpyxl
 from 初始脚本 import math
 import numpy as np
 import cv2

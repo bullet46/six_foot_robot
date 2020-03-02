@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81d4203a-72a4-4de3-aba5-f3e24519c765" name="Default Changelist" comment="">
+    <list default="true" id="a3619a97-ca47-4718-a0c8-5a84d4700588" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator-enh.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/six_foot_robot.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/重构逻辑/caculater.py" beforeDir="false" afterPath="$PROJECT_DIR$/重构逻辑/caculater.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/初始脚本/stastic.py" beforeDir="false" afterPath="$PROJECT_DIR$/初始脚本/stastic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/重构逻辑/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/重构逻辑/init.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/重构逻辑/spider_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/重构逻辑/spider_object.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="ProjectId" id="1WZS8bOS6aLeKUiPMgFNCinBY99" />
+  <component name="ProjectId" id="1YZ3G7egPMeZg5FjWJlqiMor103" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -29,100 +31,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\six_foot_robot\framework" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Python.caculater">
-    <configuration name="caculater" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="six_foot_robot" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/重构逻辑" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/重构逻辑/caculater.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="circle (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="six_foot_robot" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/初始脚本" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/初始脚本/circle.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="init" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="six_foot_robot" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/重构逻辑" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/重构逻辑/init.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="six_foot_robot" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/重构逻辑" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/重构逻辑/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="spider_object" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="six_foot_robot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,9 +42,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="H:\ANACONDA\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/重构逻辑" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/重构逻辑/spider_object.py" />
@@ -146,11 +58,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.caculater" />
-        <item itemvalue="Python.circle (1)" />
         <item itemvalue="Python.spider_object" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.init" />
       </list>
     </recent_temporary>
   </component>
@@ -171,147 +79,38 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="81d4203a-72a4-4de3-aba5-f3e24519c765" name="Default Changelist" comment="" />
-      <created>1579355465268</created>
+      <changelist id="a3619a97-ca47-4718-a0c8-5a84d4700588" name="Default Changelist" comment="" />
+      <created>1583136190721</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1579355465268</updated>
+      <updated>1583136190721</updated>
     </task>
-    <task id="LOCAL-00001" summary="完成进度 20%">
-      <created>1582904059407</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1582904059407</updated>
-    </task>
-    <task id="LOCAL-00002" summary="完成进度 25%">
-      <created>1582907790911</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1582907790911</updated>
-    </task>
-    <task id="LOCAL-00003" summary="完成进度 30%">
-      <created>1582957642621</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1582957642621</updated>
-    </task>
-    <task id="LOCAL-00004" summary="完成进度 30%">
-      <created>1582957657512</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1582957657512</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="完成进度 20%" />
-    <MESSAGE value="完成进度 25%" />
-    <MESSAGE value="完成进度 30%" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成进度 30%" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="184" key="#Postfix_Completion" timestamp="1579708383543">
+    <state x="679" y="138" key="#spider_object" timestamp="1583136228878">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="184" key="#Postfix_Completion/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579708383543" />
-    <state x="404" y="171" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582952107788">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="404" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1582952107788" />
-    <state x="391" y="0" key="#spider_object" timestamp="1582705586551">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="391" y="0" key="#spider_object/0.0.1366.738@0.0.1366.738" timestamp="1582705586551" />
-    <state x="679" y="138" key="#stastic" timestamp="1579355486918">
+    <state x="679" y="138" key="#spider_object/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136228878" />
+    <state width="1899" height="83" key="GridCell.Tab.0.bottom" timestamp="1583136324783">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="679" y="138" key="#stastic/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579355486918" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1582957655759">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1582957655759" />
-    <state width="1345" height="169" key="GridCell.Tab.0.bottom" timestamp="1582976954639">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1899" height="150" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579708324526" />
-    <state width="1345" height="169" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1582976954639" />
-    <state width="1345" height="169" key="GridCell.Tab.0.center" timestamp="1582976954638">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1899" height="150" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579708324526" />
-    <state width="1345" height="169" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1582976954638" />
-    <state width="1345" height="169" key="GridCell.Tab.0.left" timestamp="1582976954638">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1899" height="150" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579708324526" />
-    <state width="1345" height="169" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1582976954638" />
-    <state width="1345" height="169" key="GridCell.Tab.0.right" timestamp="1582976954638">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1899" height="150" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579708324526" />
-    <state width="1345" height="169" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1582976954638" />
-    <state width="1345" height="135" key="GridCell.Tab.1.bottom" timestamp="1582946423844">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1899" height="352" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579599245422" />
-    <state width="1345" height="135" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1582946423844" />
-    <state width="1345" height="135" key="GridCell.Tab.1.center" timestamp="1582946423844">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1899" height="352" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579599245422" />
-    <state width="1345" height="135" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1582946423844" />
-    <state width="1345" height="135" key="GridCell.Tab.1.left" timestamp="1582946423843">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1899" height="352" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579599245421" />
-    <state width="1345" height="135" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1582946423843" />
-    <state width="1345" height="135" key="GridCell.Tab.1.right" timestamp="1582946423844">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1899" height="352" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579599245422" />
-    <state width="1345" height="135" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1582946423844" />
-    <state x="213" y="30" width="916" height="708" key="SettingsEditor" timestamp="1582897007939">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="299" y="188" width="998" height="709" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579704894261" />
-    <state x="213" y="30" width="916" height="708" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1582897007939" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1582957673531">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1582957673531" />
-    <state x="640" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1579598727836">
+    <state width="1899" height="83" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136324783" />
+    <state width="1899" height="83" key="GridCell.Tab.0.center" timestamp="1583136324783">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="640" y="349" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579598727836" />
-    <state x="475" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582907792948">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1899" height="83" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136324783" />
+    <state width="1899" height="83" key="GridCell.Tab.0.left" timestamp="1583136324782">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="475" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1582907792948" />
-    <state x="443" y="160" width="672" height="477" key="search.everywhere.popup" timestamp="1582899126365">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1899" height="83" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136324782" />
+    <state width="1899" height="83" key="GridCell.Tab.0.right" timestamp="1583136324783">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1579706694434" />
-    <state x="443" y="160" width="672" height="477" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1582899126365" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/初始脚本/circle.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/初始脚本/draw_write.py</url>
-          <line>133</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="1899" height="83" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136324783" />
+    <state x="461" y="167" key="SettingsEditor" timestamp="1583136473665">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="167" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136473665" />
   </component>
 </project>
