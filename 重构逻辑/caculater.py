@@ -19,7 +19,7 @@ def foot_position(root: list, angle, length, forward):  # 给定原点坐标，�
 
 
 def six_roots(position: list, forwards):  # 给定机器人中心位置，机器人面朝方向，计算机器人摄像头位置以及6个根节点坐标
-    orignal = np.array([[0, 50], [-58, 98], [58, 98], [88, 0], [58, -98], [-58, -98], [-88, 0]])
+    orignal = np.array([[0, -50], [-58, 98], [58, 98], [88, 0], [58, -98], [-58, -98], [-88, 0]])
     trans = np.array([[cos(radians(forwards - 90)), sin(radians(forwards - 90))],
                       [cos(radians(forwards)), sin(radians(forwards))]], np.float64)  # 2*2的变换基底矩阵
     lists = []
