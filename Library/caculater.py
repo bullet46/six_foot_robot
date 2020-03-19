@@ -4,7 +4,7 @@
 from math import *
 import numpy as np
 import json
-from init import *
+from Spider.init import *
 
 
 def line_distance(point_1: list, point_2: list):  # 给定两点坐标，计算距离
@@ -79,7 +79,7 @@ if __name__ == "__main__":
     # print(lists[90][0 + 45])  # 这里加45是因为第二关节定义域初始点是从-45开始的
     # with open('l&h_angle.josn', 'w') as fp:
     #    fp.write(json.dumps(angle_12_ex(lists)))
-    with open('l&h_angle.json', 'r') as fp:
+    with open('../Data/l&h_angle.json', 'r') as fp:
         dic = json.load(fp)
     for i in range(-255, 255):  # 用于找出在指定高度下，允许活动的最大自由度
         temp = []

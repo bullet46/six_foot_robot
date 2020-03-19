@@ -3,9 +3,7 @@
 """
 
 import cv2 as cv
-import numpy as np
-from init import *
-from caculater import *
+from Library.caculater import *
 from math import *
 
 
@@ -32,12 +30,12 @@ class Leg(object):
 
     def caculate_angle(self):  # 计算根部与足部产生的角度,第一个舵机
         try:
-            if atan((self.foot[0] - self.root[0])) <=0:
-                self.angle = int(degrees(atan((self.foot[1] - self.root[1]) / (self.foot[0] - self.root[0]))))+180
-            else :
+            if atan((self.foot[0] - self.root[0])) <= 0:
                 self.angle = int(degrees(atan((self.foot[1] - self.root[1]) / (self.foot[0] - self.root[0]))))
-        except ZeroDivisionError:
-            if (self.foot[0] - self.root[0]) >= 0:
+            else:
+                self.angle = int(degrees(atan((self.foot[1] - self.root[1]) / (self.foot[0] - self.root[0]))))
+        except:
+            if (self.foot[1] - self.root[1]) >= 0:
                 self.angle = 90
             else:
                 self.angle = -90
@@ -52,9 +50,8 @@ class Spider(object):
         self.position = position
         self.forward = 90  # 机器人正方向默认为90
         self.dicts = dicts  # 将长高转角度的读入字典
-        self.six_roots = six_roots(position, 90)  # 返回所有根节点
+        self.six_roots = six_roots(position, self.forward)  # 返回所有根节点
         self.position = position
-        self.forward = 90
         self.init_create()
 
     def init_create(self):  # 用于创建6个leg类与记录摄像头位置
@@ -95,7 +92,7 @@ def create_img(size: list, color):
 if __name__ == '__main__':
     img = create_img([800, 800], grey)
     original = img
-    with open('l&h_angle.json', 'r') as f:
+    with open('../Data/l&h_angle.json', 'r') as f:
         dicts = json.load(f)
     spider = Spider([400, 400], dicts)
     spider.draw(img)
