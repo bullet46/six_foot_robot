@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3619a97-ca47-4718-a0c8-5a84d4700588" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator-enh.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/six_foot_robot.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="a3619a97-ca47-4718-a0c8-5a84d4700588" name="Default Changelist" comment="更新了spider对象的内容">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/初始脚本/stastic.py" beforeDir="false" afterPath="$PROJECT_DIR$/初始脚本/stastic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/重构逻辑/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/重构逻辑/init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/重构逻辑/spider_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/重构逻辑/spider_object.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1YZ3G7egPMeZg5FjWJlqiMor103" />
   <component name="ProjectViewState">
@@ -31,10 +29,43 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot\Document" />
+      <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot\Spider" />
+      <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot\Library" />
+      <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot\Data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.spider_object">
+    <configuration name="caculater" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="six_foot_robot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/重构逻辑" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/重构逻辑/caculater.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="spider_object" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="six_foot_robot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -59,6 +90,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.spider_object" />
+        <item itemvalue="Python.caculater" />
       </list>
     </recent_temporary>
   </component>
@@ -85,32 +117,106 @@
       <option name="presentableId" value="Default" />
       <updated>1583136190721</updated>
     </task>
+    <task id="LOCAL-00001" summary="解决了一个项目配置问题">
+      <created>1583136511212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583136511212</updated>
+    </task>
+    <task id="LOCAL-00002" summary="解决了一个项目配置问题">
+      <created>1583137684452</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583137684452</updated>
+    </task>
+    <task id="LOCAL-00003" summary="更新了spider对象的内容">
+      <created>1583142382522</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583142382522</updated>
+    </task>
+    <task id="LOCAL-00004" summary="更新了spider对象的内容">
+      <created>1583143380371</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583143380371</updated>
+    </task>
+    <task id="LOCAL-00005" summary="继续完成了spider类的构造">
+      <created>1583158811486</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583158811486</updated>
+    </task>
+    <task id="LOCAL-00006" summary="优化结构">
+      <created>1584606520374</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584606520374</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="解决了一个项目配置问题" />
+    <MESSAGE value="更新了spider对象的内容" />
+    <MESSAGE value="继续完成了spider类的构造" />
+    <MESSAGE value="优化结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化结构" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="184" key="#Notifications" timestamp="1583158871818">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="184" key="#Notifications/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583158871818" />
     <state x="679" y="138" key="#spider_object" timestamp="1583136228878">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="679" y="138" key="#spider_object/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136228878" />
-    <state width="1899" height="83" key="GridCell.Tab.0.bottom" timestamp="1583136324783">
+    <state x="598" y="117" key="CommitChangelistDialog2" timestamp="1584606519340">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="83" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136324783" />
-    <state width="1899" height="83" key="GridCell.Tab.0.center" timestamp="1583136324783">
+    <state x="598" y="117" key="CommitChangelistDialog2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584606519340" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1583137121859">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="83" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136324783" />
-    <state width="1899" height="83" key="GridCell.Tab.0.left" timestamp="1583136324782">
+    <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583137121859" />
+    <state width="1899" height="178" key="GridCell.Tab.0.bottom" timestamp="1583220918882">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="83" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136324782" />
-    <state width="1899" height="83" key="GridCell.Tab.0.right" timestamp="1583136324783">
+    <state width="1899" height="178" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583220918882" />
+    <state width="1899" height="178" key="GridCell.Tab.0.center" timestamp="1583220918882">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="83" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136324783" />
-    <state x="461" y="167" key="SettingsEditor" timestamp="1583136473665">
+    <state width="1899" height="178" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583220918882" />
+    <state width="1899" height="178" key="GridCell.Tab.0.left" timestamp="1583220918882">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="461" y="167" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136473665" />
+    <state width="1899" height="178" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583220918882" />
+    <state width="1899" height="178" key="GridCell.Tab.0.right" timestamp="1583220918882">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="178" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583220918882" />
+    <state x="694" y="328" key="SettingsEditor" timestamp="1583140275896">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="694" y="328" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583140275896" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1584606589836">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584606589836" />
+    <state x="752" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583137832546">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="752" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583137832546" />
+    <state x="656" y="316" key="git4idea.merge.GitPullDialog" timestamp="1583136521510">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="656" y="316" key="git4idea.merge.GitPullDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136521510" />
   </component>
 </project>
