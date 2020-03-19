@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3619a97-ca47-4718-a0c8-5a84d4700588" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/data_creater" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/six_foot_robot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/six_foot_robot.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/angle_l&amp;h.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/angle_l&amp;h.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/caculater.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/caculater.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spider/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spider/init.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584606727141</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="单个机器人腿指定高度下的长度取值范围">
+      <created>1584612624508</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1584612624508</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -223,7 +226,8 @@
     <MESSAGE value="继续完成了spider类的构造" />
     <MESSAGE value="优化结构" />
     <MESSAGE value="更新了spider对象的内容" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新了spider对象的内容" />
+    <MESSAGE value="单个机器人腿指定高度下的长度取值范围" />
+    <option name="LAST_COMMIT_MESSAGE" value="单个机器人腿指定高度下的长度取值范围" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="184" key="#Notifications" timestamp="1583158871818">
@@ -242,10 +246,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="679" y="138" key="#spider_object/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136228878" />
-    <state x="598" y="117" key="CommitChangelistDialog2" timestamp="1584606726470">
+    <state x="598" y="117" key="CommitChangelistDialog2" timestamp="1584612623611">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="598" y="117" key="CommitChangelistDialog2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584606726470" />
+    <state x="598" y="117" key="CommitChangelistDialog2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584612623611" />
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1583137121859">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -270,10 +274,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="694" y="328" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584607820362" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1584606589836">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1584612632897">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584606589836" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584612632897" />
     <state x="752" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583137832546">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
