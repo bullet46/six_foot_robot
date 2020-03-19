@@ -1,0 +1,71 @@
+"""
+该脚本用于生成
+angle_l&h.json:将舵机角度转换为长和高
+l&h_angle.json:将长和高转换为舵机角度
+l_limit.json:指定长度下高度的定义域
+h_limit.json:指定高度下长的定义域
+"""
+import json
+from Library.caculater import *
+from Spider.init import *
+
+
+def create_angle_l():
+    lists = length_height_ex()  # 如果length_height_ex有内容改动(如设计参数有变化)，请运行该方法
+    with open("angle_l&h.json", "w") as fp:
+        fp.write(json.dumps(lists))
+        print('angle_l&h.json写入成功')
+
+
+def create_l_angle():
+    with open("angle_l&h.json", "r") as fp:
+        lists = json.load(fp)
+    print(lists[90][0 + 45])  # 这里加45是因为第二关节定义域初始点是从-45开始的
+    with open('l&h_angle.json', 'w') as fp:
+        fp.write(json.dumps(angle_12_ex(lists)))
+        print('l&h_angle.json写入成功')
+
+
+def l_limit():  # 指定长度可取值的高度范围
+    empty_dicts = {}
+    with open('l&h_angle.json', 'r') as fp:
+        dicts = json.load(fp)
+    for i in range(-limits, limits):
+        min_h = 2000000
+        max_h = -2000000
+        for t in range(-limits, limits):
+            t1 = find_angle(i, t, dicts)
+            if t1 is not None:
+                min_h = min(min_h, t)
+                max_h = max(max_h, t)
+        if min_h != 2000000:
+            empty_dicts.update({str(i): [min_h, max_h]})
+    with open('l_limit.json', 'w') as new:
+        new.write(json.dumps(empty_dicts))
+        print('l_limit.json写入成功')
+
+
+def h_limit():  # 指定高度的可取值的长度范围
+    empty_dicts = {}
+    with open('l&h_angle.json', 'r') as fp:
+        dicts = json.load(fp)
+    for t in range(-limits, limits):
+        min_h = 2000000
+        max_h = -2000000
+        for i in range(-limits, limits):
+            t1 = find_angle(i, t, dicts)
+            if t1 is not None:
+                min_h = min(min_h, i)
+                max_h = max(max_h, i)
+        if min_h != 2000000:
+            empty_dicts.update({str(t): [min_h, max_h]})
+    with open('h_limit.json', 'w') as new:
+        new.write(json.dumps(empty_dicts))
+        print('h_limit.json写入成功')
+
+
+if __name__ == "__main__":
+    create_angle_l()
+    create_l_angle()
+    l_limit()
+    h_limit()

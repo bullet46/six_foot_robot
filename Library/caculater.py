@@ -64,28 +64,14 @@ def angle_12_ex(lists):
 
 
 def find_angle(length, height, dic: dict):
+    """
+    :param length: 需求的长度
+    :param height: 需求的高度
+    :param dic: l&h_angle高度
+    :return: 返回角度信息
+    """
     try:
         return dic[str(length) + '_' + str(height)]
     except:
         return None
 
-
-if __name__ == "__main__":
-    # lists = length_height_ex()  # 如果length_height_ex有内容改动，请运行该3行刷新数据
-    # with open("angle_l&h.json", "w") as fp:
-    #     fp.write(json.dumps(lists))
-    # with open("angle_l&h.json", "r") as fp:
-    #   lists = json.load(fp)
-    # print(lists[90][0 + 45])  # 这里加45是因为第二关节定义域初始点是从-45开始的
-    # with open('l&h_angle.josn', 'w') as fp:
-    #    fp.write(json.dumps(angle_12_ex(lists)))
-    with open('../Data/l&h_angle.json', 'r') as fp:
-        dic = json.load(fp)
-    for i in range(-255, 255):  # 用于找出在指定高度下，允许活动的最大自由度
-        temp = []
-        for t in range(0, 375):
-            back = find_angle(t, i, dic)
-            if back != None:
-                temp.append(t)
-        if len(temp) != 0:
-            print('在{}高度下，具有{}种长度，最长为{}，最短为{}'.format(i, len(temp), temp[-1], temp[0]))

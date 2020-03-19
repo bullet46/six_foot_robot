@@ -3,6 +3,8 @@ joint_between = 50  # 第一关节间距
 first_arm_length = 75  # 第一手臂长度
 second_arm_length = 150  # 第二手臂长度
 
+limits = joint_between +first_arm_length+second_arm_length #最大伸展距离
+
 # 关节编号说明
 first_joint = [1, 2, 3, 4, 5, 6]  # 第一关节编号
 second_joint = [7, 8, 9, 10, 11, 12]  # 第二关节编号
