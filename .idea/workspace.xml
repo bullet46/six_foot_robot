@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3619a97-ca47-4718-a0c8-5a84d4700588" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Data/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/data_find.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/angle_l&amp;h.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/angle_l&amp;h.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/data_creater" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data_creater" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/h_limit.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/h_limit.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/l&amp;h_angle.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/l&amp;h_angle.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/l_limit.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/l_limit.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/caculater.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/caculater.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spider/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spider/init.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spider/spider_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spider/spider_object.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,18 +45,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot\Document" />
-      <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot\Spider" />
-      <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot\Library" />
-      <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot\Data" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot\Data" />
+      <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot\Document" />
+      <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot\Spider" />
+      <recent name="C:\Users\Administrator\PycharmProjects\six_foot_robot\Library" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.data_creater">
-    <configuration name="caculater" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.spider_object (1)">
+    <configuration name="caculater (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="six_foot_robot" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -54,11 +64,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/重构逻辑" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Library" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/重构逻辑/caculater.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Library/caculater.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -88,6 +98,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="data_find" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="six_foot_robot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Library" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Library/data_find.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="spider_object (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="six_foot_robot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,7 +140,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="spider_object" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="six_foot_robot" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -117,11 +148,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/重构逻辑" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/重构逻辑/spider_object.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,10 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.data_creater" />
         <item itemvalue="Python.spider_object (1)" />
-        <item itemvalue="Python.spider_object" />
-        <item itemvalue="Python.caculater" />
+        <item itemvalue="Python.data_find" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.caculater (1)" />
+        <item itemvalue="Python.data_creater" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584612624508</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="更新进度">
+      <created>1584613268482</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1584613268482</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -227,7 +266,8 @@
     <MESSAGE value="优化结构" />
     <MESSAGE value="更新了spider对象的内容" />
     <MESSAGE value="单个机器人腿指定高度下的长度取值范围" />
-    <option name="LAST_COMMIT_MESSAGE" value="单个机器人腿指定高度下的长度取值范围" />
+    <MESSAGE value="更新进度" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新进度" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="184" key="#Notifications" timestamp="1583158871818">
@@ -246,45 +286,81 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="679" y="138" key="#spider_object/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136228878" />
-    <state x="598" y="117" key="CommitChangelistDialog2" timestamp="1584612623611">
+    <state x="598" y="117" key="CommitChangelistDialog2" timestamp="1584613296184">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="598" y="117" key="CommitChangelistDialog2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584612623611" />
+    <state x="598" y="117" key="CommitChangelistDialog2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584613296184" />
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1583137121859">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583137121859" />
-    <state width="1899" height="178" key="GridCell.Tab.0.bottom" timestamp="1584612489693">
+    <state width="1899" height="352" key="GridCell.Tab.0.bottom" timestamp="1585056667859">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="178" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584612489693" />
-    <state width="1899" height="178" key="GridCell.Tab.0.center" timestamp="1584612489693">
+    <state width="1899" height="352" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
+    <state width="1899" height="352" key="GridCell.Tab.0.center" timestamp="1585056667859">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="178" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584612489693" />
-    <state width="1899" height="178" key="GridCell.Tab.0.left" timestamp="1584612489693">
+    <state width="1899" height="352" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
+    <state width="1899" height="352" key="GridCell.Tab.0.left" timestamp="1585056667859">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="178" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584612489693" />
-    <state width="1899" height="178" key="GridCell.Tab.0.right" timestamp="1584612489693">
+    <state width="1899" height="352" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
+    <state width="1899" height="352" key="GridCell.Tab.0.right" timestamp="1585056667859">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="178" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584612489693" />
+    <state width="1899" height="352" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
+    <state width="1899" height="352" key="GridCell.Tab.1.bottom" timestamp="1585056667859">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="352" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
+    <state width="1899" height="352" key="GridCell.Tab.1.center" timestamp="1585056667859">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="352" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
+    <state width="1899" height="352" key="GridCell.Tab.1.left" timestamp="1585056667859">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="352" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
+    <state width="1899" height="352" key="GridCell.Tab.1.right" timestamp="1585056667859">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="352" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
     <state x="694" y="328" key="SettingsEditor" timestamp="1584607820362">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="694" y="328" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584607820362" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1584612632897">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1584613315056">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584612632897" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584613315056" />
     <state x="752" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583137832546">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="752" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583137832546" />
+    <state x="-1679" y="-12" width="1441" height="1036" maximized="true" key="dock-window-1" timestamp="1584951891569">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1679" y="-12" width="1441" height="1036" maximized="true" key="dock-window-1/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584951891569" />
     <state x="656" y="316" key="git4idea.merge.GitPullDialog" timestamp="1583136521510">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="656" y="316" key="git4idea.merge.GitPullDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136521510" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Spider/spider_object.py</url>
+          <line>107</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Spider/spider_object.py</url>
+          <line>112</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

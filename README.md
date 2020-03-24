@@ -6,7 +6,7 @@
 ### 该项目正在逐步完成中
 [![LICENCE](https://img.shields.io/badge/State-Incomplete-red.svg)]()
 
-[![LICENCE](https://img.shields.io/badge/Progress-20/100-green.svg)]()
+[![LICENCE](https://img.shields.io/badge/Progress-30/100-green.svg)]()
 #### 预计时间:1个月
 ### 开源内容包括
 * 设计图纸
