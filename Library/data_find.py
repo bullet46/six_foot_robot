@@ -50,7 +50,13 @@ class data_find():
         :return 对应长度与高度
         """
         lists = self.angle_lh
-        return lists[angle1][angle2 + 45]
+        bck_list = []
+        for i in lists[angle1][angle2 + 45]:
+            temp_list= []
+            for t in i:
+                temp_list.append(int(t)) # 需要将浮点数转化为整数才能按像素显示
+            bck_list.append(temp_list)
+        return bck_list
 
     def find_l_limit(self, length):
         """

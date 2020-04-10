@@ -19,7 +19,7 @@ class Leg(object):
         self.foot = foot
         self.fixed = True  # 初始为固定状态,即起支撑作用
         self.height = None  # 高度信息
-        self.length = line_distance(root,foot)  # 长度信息
+        self.length = int(line_distance(root,foot))  # 长度信息
 
     def draw(self, img):
         if self.fixed:  # 固定状态的颜色
@@ -47,14 +47,16 @@ class Leg(object):
         :param y_img: 用于绘制的底图
         """
         self.panel_angle = self.data.find_angle(self.length, self.height)
-        if self.panel_angle is not None:
+        if self.panel_angle is None:
             print('无法获得')
+            return -1
         self.panel_position = self.data.find_lh(self.panel_angle[0], self.panel_angle[1])
-        cv.line(y_img, tuple(self.panel_position[0]+center), tuple(self.panel_position[1]+center), yellow, 3)
-        cv.line(y_img, tuple(center), tuple(self.panel_position[0]+center), yellow, 3)
+        cv.line(y_img, add_position(self.panel_position[0],center), add_position(self.panel_position[1],center), yellow, 3)
+        cv.line(y_img, tuple(center), add_position(self.panel_position[0],center), yellow, 3)
         cv.circle(y_img, tuple(center), 3, red, -1)
-        cv.circle(y_img, tuple(self.panel_position[0]+center), 3, green, -1)
-        cv.circle(y_img, tuple(self.panel_position[1]+center), 3, green, -1)
+        cv.circle(y_img, add_position(self.panel_position[0],center), 3, green, -1)
+        cv.circle(y_img, add_position(self.panel_position[1],center), 3, green, -1)
+        cv.imshow('123', y_img)
 
 
 class Spider(object):
@@ -106,8 +108,9 @@ def create_img(size: list, color):
 
 
 if __name__ == '__main__':
-    img = create_img([800, 800], grey)
-    img_y = create_img([800, 800], grey)
-    leg1 =Leg([400,400],[300,300])
+    img_y = create_img([400, 400], grey)
+    leg1 =Leg([400,400],[270,270])
     leg1.height = 50
-    leg1.draw_z(img_y,[400,400])
+    leg1.draw_z(img_y,[200,200])
+    while True:
+        cv.waitKey(0)

@@ -10,7 +10,7 @@ from Spider.init import *
 def line_distance(point_1: list, point_2: list):  # 给定两点坐标，计算距离
     length = abs(point_1[0] - point_2[0])
     height = abs(point_1[1] - point_2[1])
-    return pow((length ** 2 + height ** 2), 2)
+    return pow((length ** 2 + height ** 2), 1/2)
 
 
 def foot_position(root: list, angle, length, forward):  # 给定原点坐标，角度，长度，起始方向角度；返还延伸点坐标
@@ -28,5 +28,6 @@ def six_roots(position: list, forwards):  # 给定机器人中心位置，机器
         lists.append([roots[0] + position[0], roots[1] + position[1]])
     return lists
 
-
+def add_position(pos1,pos2): # 两个二维数组内的元素逐个相加
+    return tuple([pos1[0]+pos2[0],pos1[1]+pos2[1]])
 
