@@ -3,6 +3,7 @@
 """
 import json
 import os
+from Spider.init import *
 
 class data_find():
     def __init__(self):
@@ -26,7 +27,7 @@ class data_find():
         :return: 返回角度信息
         """
         dic = self.lh_angle
-        latitude = 5  # 宽容度为3个mm，且只对目标长度宽容
+        latitude = 2  # 宽容度为2个mm，且只对目标长度宽容
         ranges = [0]
         for i in range(1, latitude + 1):  # 生成[0,-1,+1,-2,+2...]的宽容度列表
             ranges.append(-i)
@@ -47,7 +48,7 @@ class data_find():
         用于找到对应关节角度下的长高
         :param angle1: 第一个关节的角度
         :param angle2: 第二个关节的角度
-        :return 对应长度与高度
+        :return 对应两只关节的坐标(二维数组)
         """
         lists = self.angle_lh
         bck_list = []

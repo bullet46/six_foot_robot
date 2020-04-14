@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3619a97-ca47-4718-a0c8-5a84d4700588" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/data_find.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spider/move_scrip.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/angle_l&amp;h.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/angle_l&amp;h.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/data_creater" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data_creater" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/h_limit.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/h_limit.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/l&amp;h_angle.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/l&amp;h_angle.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/l_limit.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/l_limit.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/caculater.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/caculater.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/data_find.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/data_find.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spider/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spider/init.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spider/spider_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/Spider/spider_object.py" afterDir="false" />
     </list>
@@ -42,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -164,10 +163,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.spider_object (1)" />
+        <item itemvalue="Python.data_creater" />
         <item itemvalue="Python.data_find" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.caculater (1)" />
-        <item itemvalue="Python.data_creater" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +256,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584613268482</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="更新进度">
+      <created>1585056715148</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585056715148</updated>
+    </task>
+    <task id="LOCAL-00011" summary="对y轴进行了图像仿真">
+      <created>1586523583906</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1586523583906</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -267,13 +280,14 @@
     <MESSAGE value="更新了spider对象的内容" />
     <MESSAGE value="单个机器人腿指定高度下的长度取值范围" />
     <MESSAGE value="更新进度" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新进度" />
+    <MESSAGE value="对y轴进行了图像仿真" />
+    <option name="LAST_COMMIT_MESSAGE" value="对y轴进行了图像仿真" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="184" key="#Notifications" timestamp="1583158871818">
+    <state x="552" y="184" key="#Notifications" timestamp="1585057598002">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="184" key="#Notifications/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583158871818" />
+    <state x="552" y="184" key="#Notifications/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585057598002" />
     <state x="687" y="328" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584608377588">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -286,54 +300,54 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="679" y="138" key="#spider_object/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136228878" />
-    <state x="598" y="117" key="CommitChangelistDialog2" timestamp="1584613296184">
+    <state x="598" y="117" key="CommitChangelistDialog2" timestamp="1586523583036">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="598" y="117" key="CommitChangelistDialog2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584613296184" />
+    <state x="598" y="117" key="CommitChangelistDialog2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586523583036" />
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1583137121859">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="280" key="FileChooserDialogImpl/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583137121859" />
-    <state width="1899" height="352" key="GridCell.Tab.0.bottom" timestamp="1585056667859">
+    <state width="1899" height="232" key="GridCell.Tab.0.bottom" timestamp="1586838544367">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="352" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
-    <state width="1899" height="352" key="GridCell.Tab.0.center" timestamp="1585056667859">
+    <state width="1899" height="232" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586838544367" />
+    <state width="1899" height="232" key="GridCell.Tab.0.center" timestamp="1586838544367">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="352" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
-    <state width="1899" height="352" key="GridCell.Tab.0.left" timestamp="1585056667859">
+    <state width="1899" height="232" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586838544367" />
+    <state width="1899" height="232" key="GridCell.Tab.0.left" timestamp="1586838544367">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="352" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
-    <state width="1899" height="352" key="GridCell.Tab.0.right" timestamp="1585056667859">
+    <state width="1899" height="232" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586838544367" />
+    <state width="1899" height="232" key="GridCell.Tab.0.right" timestamp="1586838544367">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="352" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
-    <state width="1899" height="352" key="GridCell.Tab.1.bottom" timestamp="1585056667859">
+    <state width="1899" height="232" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586838544367" />
+    <state width="1899" height="352" key="GridCell.Tab.1.bottom" timestamp="1586535504344">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="352" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
-    <state width="1899" height="352" key="GridCell.Tab.1.center" timestamp="1585056667859">
+    <state width="1899" height="352" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586535504344" />
+    <state width="1899" height="352" key="GridCell.Tab.1.center" timestamp="1586535504344">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="352" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
-    <state width="1899" height="352" key="GridCell.Tab.1.left" timestamp="1585056667859">
+    <state width="1899" height="352" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586535504344" />
+    <state width="1899" height="352" key="GridCell.Tab.1.left" timestamp="1586535504344">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="352" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
-    <state width="1899" height="352" key="GridCell.Tab.1.right" timestamp="1585056667859">
+    <state width="1899" height="352" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586535504344" />
+    <state width="1899" height="352" key="GridCell.Tab.1.right" timestamp="1586535504344">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="352" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585056667859" />
-    <state x="694" y="328" key="SettingsEditor" timestamp="1584607820362">
+    <state width="1899" height="352" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586535504344" />
+    <state x="40" y="276" key="SettingsEditor" timestamp="1586350074808">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="694" y="328" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584607820362" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1584613315056">
+    <state x="40" y="276" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586350074808" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1586523609995">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584613315056" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586523609995" />
     <state x="752" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583137832546">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -346,21 +360,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="656" y="316" key="git4idea.merge.GitPullDialog/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1583136521510" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Spider/spider_object.py</url>
-          <line>107</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Spider/spider_object.py</url>
-          <line>112</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1586772215560">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586772215560" />
   </component>
 </project>

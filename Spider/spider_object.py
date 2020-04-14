@@ -19,7 +19,9 @@ class Leg(object):
         self.foot = foot
         self.fixed = True  # 初始为固定状态,即起支撑作用
         self.height = None  # 高度信息
-        self.length = int(line_distance(root,foot))  # 长度信息
+        self.length = int(line_distance(root, foot))  # 长度信息
+
+
 
     def draw(self, img):
         if self.fixed:  # 固定状态的颜色
@@ -42,7 +44,7 @@ class Leg(object):
             else:
                 self.angle = -90
 
-    def draw_z(self, y_img,center):  # 画出yaw轴关节演示
+    def draw_z(self, y_img, center):  # 画出yaw轴关节演示
         """
         :param y_img: 用于绘制的底图
         """
@@ -51,11 +53,12 @@ class Leg(object):
             print('无法获得')
             return -1
         self.panel_position = self.data.find_lh(self.panel_angle[0], self.panel_angle[1])
-        cv.line(y_img, add_position(self.panel_position[0],center), add_position(self.panel_position[1],center), yellow, 3)
-        cv.line(y_img, tuple(center), add_position(self.panel_position[0],center), yellow, 3)
+        cv.line(y_img, add_position(self.panel_position[0], center), add_position(self.panel_position[1], center),
+                yellow, 3)
+        cv.line(y_img, tuple(center), add_position(self.panel_position[0], center), yellow, 3)
         cv.circle(y_img, tuple(center), 3, red, -1)
-        cv.circle(y_img, add_position(self.panel_position[0],center), 3, green, -1)
-        cv.circle(y_img, add_position(self.panel_position[1],center), 3, green, -1)
+        cv.circle(y_img, add_position(self.panel_position[0], center), 3, green, -1)
+        cv.circle(y_img, add_position(self.panel_position[1], center), 3, green, -1)
         cv.imshow('123', y_img)
 
 
@@ -64,9 +67,11 @@ class Spider(object):
     spider类，用于记录机器人目前的活动信息
     """
 
-    def __init__(self, position, dicts: dict):
+    def __init__(self, position , forward):
+        with open('../Data/l&h_angle.json','r') as f:
+            dicts = json.loads(f)
         self.position = position
-        self.forward = 90  # 机器人正方向默认为90
+        self.forward = forward  # 机器人正方向默认为90
         self.dicts = dicts  # 将长高转角度的读入字典
         self.six_roots = six_roots(position, self.forward)  # 返回所有根节点
         self.position = position
@@ -92,11 +97,16 @@ class Spider(object):
             self.__dict__[f'leg_{i}'].draw(img)
         cv.circle(img, tuple(self.camera_position), 7, yellow, 2)
 
-    def caculate_angle(self):
-        self.angles = []
+    def calculate_machine_angle(self):
+        self.space_angles = [] # 空间位置下机器人的关节角度
+        self.machine_angles = [] # 机器人三只关节机械角度
         for i in range(1, 7):
             self.__dict__[f'leg_{i}'].caculate_angle()
-            self.angles.append(self.__dict__[f'leg_{i}'].angle)
+            self.space_angle.append(self.__dict__[f'leg_{i}'].angle)
+            self.machine_angle.append(space_angle_to_machine_angle(self.__dict__[f'leg_{i}'].angle, self.forward))
+
+
+
 
 
 def create_img(size: list, color):
@@ -108,9 +118,13 @@ def create_img(size: list, color):
 
 
 if __name__ == '__main__':
-    img_y = create_img([400, 400], grey)
-    leg1 =Leg([400,400],[270,270])
-    leg1.height = 50
-    leg1.draw_z(img_y,[200,200])
+    i = 150
     while True:
-        cv.waitKey(0)
+       img_y = create_img([800, 800], grey)
+       leg1 = Leg([400, 400], [400, 400])
+       leg1.length = i
+       print(leg1.length)
+       leg1.height = 50
+       leg1.draw_z(img_y, [200, 200])
+       cv.waitKey(30)
+       i +=1
