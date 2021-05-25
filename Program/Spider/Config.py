@@ -23,6 +23,9 @@ dark = (19, 16, 11)
 grey = (70, 60, 60)
 blue = (211, 168, 81)
 orange = (28, 94, 240)
-
+brown = (0, 133, 205)
+grey_ground = (201, 201, 205)
+light_yellow = (224,255,255	)
+brown_dark = (38,71,139)
 # 默认高度为50mm
 DefaultHeight = 50

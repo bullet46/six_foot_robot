@@ -19,6 +19,5 @@ class MoveScript(object):
         self.forward_next = next_state['forward']
         self.height = state['height']
         self.height_next = next_state['height']
-        self.spider = Spider(self.position, self.forward)
-        self.spider_next = Spider(self.position_next, self.forward_next)
+
 

@@ -28,39 +28,14 @@
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string notr="true">#Foot_1,#Foot_2,#Foot_3,#Foot_4,#Foot_5,#Foot_6{
-background-color: rgb(85, 85, 127);}</string>
+background-color: rgb(85, 85, 127);
+}</string>
    </property>
    <widget class="QLabel" name="Foot_1Image">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>20</y>
-      <width>160</width>
-      <height>160</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Foot_2Image">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>200</y>
-      <width>160</width>
-      <height>160</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Foot_3Image">
-    <property name="geometry">
-     <rect>
-      <x>720</x>
-      <y>200</y>
       <width>160</width>
       <height>160</height>
      </rect>
@@ -72,11 +47,11 @@ background-color: rgb(85, 85, 127);}</string>
      <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QLabel" name="Foot_4Image">
+   <widget class="QLabel" name="Foot_2Image">
     <property name="geometry">
      <rect>
-      <x>720</x>
-      <y>380</y>
+      <x>20</x>
+      <y>200</y>
       <width>160</width>
       <height>160</height>
      </rect>
@@ -92,16 +67,51 @@ background-color: rgb(85, 85, 127);}</string>
     <property name="geometry">
      <rect>
       <x>720</x>
-      <y>20</y>
+      <y>200</y>
       <width>160</width>
       <height>160</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 85, 127);</string>
     </property>
     <property name="text">
      <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QLabel" name="Foot_6">
+   <widget class="QLabel" name="Foot_6Image">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>380</y>
+      <width>160</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 85, 127);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Foot_4Image_2">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>20</y>
+      <width>160</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 85, 127);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Foot_3Image">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -109,6 +119,9 @@ background-color: rgb(85, 85, 127);}</string>
       <width>160</width>
       <height>160</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 85, 127);</string>
     </property>
     <property name="text">
      <string>TextLabel</string>
@@ -130,35 +143,12 @@ background-color: rgb(85, 85, 127);}</string>
      <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QScrollArea" name="scrollArea">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>570</y>
-      <width>861</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="widgetResizable">
-     <bool>true</bool>
-    </property>
-    <widget class="QWidget" name="scrollAreaWidgetContents">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>859</width>
-       <height>119</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>550</y>
-      <width>861</width>
+      <width>1251</width>
       <height>16</height>
      </rect>
     </property>
@@ -166,11 +156,11 @@ background-color: rgb(85, 85, 127);}</string>
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="forward">
     <property name="geometry">
      <rect>
-      <x>1060</x>
-      <y>250</y>
+      <x>1070</x>
+      <y>190</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -179,11 +169,11 @@ background-color: rgb(85, 85, 127);}</string>
      <string>前进</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="turn_left">
     <property name="geometry">
      <rect>
-      <x>980</x>
-      <y>330</y>
+      <x>990</x>
+      <y>270</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -192,11 +182,11 @@ background-color: rgb(85, 85, 127);}</string>
      <string>左转</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="turn_right">
     <property name="geometry">
      <rect>
-      <x>1140</x>
-      <y>330</y>
+      <x>1150</x>
+      <y>270</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -205,11 +195,11 @@ background-color: rgb(85, 85, 127);}</string>
      <string>右转</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="back">
     <property name="geometry">
      <rect>
-      <x>1060</x>
-      <y>410</y>
+      <x>1070</x>
+      <y>350</y>
       <width>60</width>
       <height>60</height>
      </rect>
@@ -218,17 +208,27 @@ background-color: rgb(85, 85, 127);}</string>
      <string>后退</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="stop">
     <property name="geometry">
      <rect>
-      <x>1060</x>
-      <y>330</y>
+      <x>1070</x>
+      <y>270</y>
       <width>60</width>
       <height>60</height>
      </rect>
     </property>
     <property name="text">
      <string>停止</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>570</y>
+      <width>1241</width>
+      <height>121</height>
+     </rect>
     </property>
    </widget>
   </widget>
