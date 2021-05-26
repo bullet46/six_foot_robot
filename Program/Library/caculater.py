@@ -32,7 +32,8 @@ def forward_kinematics(angle1, angle2):
     """
     L1 = first_arm_length
     L2 = second_arm_length
-    x = L2 * sin(angle1) + L1 * cos(angle2)
+    L0 = joint_between
+    x = L2 * sin(angle1) + L1 * cos(angle2) +L0
     y = L2 * cos(angle2) - L1 * sin(angle1)
     return x, y
 
@@ -43,6 +44,7 @@ def inverse_kinematics(x, y):
     """
     try:
         x = x - joint_between
+        y = y
         L1 = first_arm_length
         L2 = second_arm_length
         F1 = - L1 ** 2 + 2 * L1 * L2 - L2 ** 2 + x ** 2 + y ** 2
@@ -60,7 +62,7 @@ def inverse_kinematics(x, y):
         a2 = 2 * atan((2 * L2 * x - sqrt(F1 * F2)) / F3)
         return int(degrees(a1)), int(degrees(a2))
     except:
-        return None,None
+        return None, None
 
 
 def calculate_angle(v1):
@@ -75,7 +77,7 @@ def calculate_angle(v1):
         else:
             return 270
     if y == 0:
-        if x < 0:
+        if x > 0:
             return 0
         else:
             return 180
@@ -102,8 +104,8 @@ def trans_cor_leg(x, y):  # 用于腿部绘图相关的坐标转换，将左上�
     return x, int(300 - y)
 
 
-def trans_cor_spi(lists:list):  # 用于六足体绘图相关的坐标转换，将左上角零点转换为右下角
-    return lists[0], int(500 - lists[1])
+def trans_cor_spi(lists: list):  # 用于六足体绘图相关的坐标转换，将左上角零点转换为右下角
+    return int(lists[0]), int(1000 - lists[1])
 
 
 def calculate_foot_position(root: list, angle, length, forward=0):  # 给定原点坐标，角度，长度，起始方向角度；返还延伸点坐标
@@ -121,7 +123,7 @@ def create_back_img(x, y, bgr):
 
 def calculate_six_roots(position: list, forwards):  # 给定机器人中心位置，机器人面朝方向，计算机器人摄像头位置以及6个根节点坐标
     forwards = forwards
-    orignal = np.array([[-58, 98],  [-88, 0],[-58, -98],[58, -98],[88, 0], [58, 98]])
+    orignal = np.array([[-58, 98], [-88, 0], [-58, -98], [58, -98], [88, 0], [58, 98]])
     trans = np.array([[cos(radians(forwards - 90)), sin(radians(forwards - 90))],
                       [cos(radians(forwards)), sin(radians(forwards))]], np.float64)  # 2*2的变换基底矩阵
     lists = []
@@ -141,8 +143,5 @@ def space_angle_to_machine_angle(angle, forward):  # 将机器人在空间坐标
 
 
 if __name__ == '__main__':
-    # print(forward_kinematics_new(0, 0))
-    # print(calculate_angle([0, 0, -45, -45]))
-    # print(inverse_kinematics(181, 106))
-    # print(calculate_angle([12, -12]))
-    print(calculate_foot_position([0,0],225,20))
+    print('正运动学a=0,b=0:x=%s,y=%s' % forward_kinematics(radians(0), radians(0)))
+    print('逆运动学x=125,y=150:a=%s,b=%s' % inverse_kinematics(125, 150))

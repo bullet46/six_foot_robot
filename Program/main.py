@@ -6,6 +6,5 @@ from GUI.launcher import Launcher
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     windows = Launcher()
-    # windows.showFullScreen()
     windows.show()
     sys.exit(app.exec_())

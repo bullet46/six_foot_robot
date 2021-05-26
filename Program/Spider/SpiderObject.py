@@ -29,13 +29,13 @@ class Leg(object):
         self.fixed_state = True  # 目前状态是否作为支撑
         self.calculate_cod(root_point, support_point, root_height)
 
-    def calculate_cod(self, root_point, support_point, root_height):
+    def calculate_cod(self, root_point, support_point, height):
         """
         给定腿部在上视图坐标位置与该腿目前高度,计算三个空间坐标系角度
         """
         self.support_length = line_distance(root_point, support_point)
-        self.cod0_angle = int(calculate_angle(sub_position(root_point, support_point)))
-        self.cod1_angle, self.cod2_angle = inverse_kinematics(self.support_length, root_height)
+        self.cod0_angle = int(calculate_angle(sub_position(support_point, root_point)))
+        self.cod1_angle, self.cod2_angle = inverse_kinematics(self.support_length, height)
 
     def control_by_angle(self, angle, length):
         """
@@ -43,6 +43,12 @@ class Leg(object):
         """
         self.support_point[0] = self.root_point[0] + cos(radians(angle)) * length
         self.support_point[1] = self.root_point[1] + sin(radians(angle)) * length
+
+    def mov_support_point(self,x,y):
+        """
+        向前移动支撑足
+        """
+        self.support_point = [self.support_point[0]+x,self.support_point[1]+y]
 
     def draw(self, back_img):
         """
@@ -57,8 +63,8 @@ class Leg(object):
         self.point1 = [240 - joint_between, 60 + self.root_height]
         self.point2 = [self.point1[0] - int(cos(radians(self.cod1_angle)) * first_arm_length),
                        self.point1[1] + int(sin(radians(self.cod1_angle)) * first_arm_length)]
-        self.point3 = [self.point2[0] - int(cos(radians(self.cod2_angle)) * second_arm_length),
-                       self.point2[1] - int(sin(radians(self.cod2_angle)) * second_arm_length)]
+        self.point3 = [self.point2[0] - int(sin(radians(self.cod2_angle)) * second_arm_length),
+                       self.point2[1] - int(cos(radians(self.cod2_angle)) * second_arm_length)]
         back_img = cv.rectangle(back_img, trans_cor_leg(0, 0), trans_cor_leg(300, 60), grey_ground, -1)
         img = cv.line(back_img, trans_cor_leg(self.point0[0], self.point0[1]),
                       trans_cor_leg(self.point1[0], self.point1[1]), leg_color, 2)
@@ -78,6 +84,10 @@ class Leg(object):
                        (255, 255, 255), 1)
             cv.putText(img, 'cod2_angle:' + str(self.cod2_angle), (10, 90), cv.FONT_HERSHEY_COMPLEX, 0.8,
                        (255, 255, 255), 1)
+            cv.putText(img, 'height:' + str(round(self.root_height, 2)), (10, 260), cv.FONT_HERSHEY_COMPLEX, 0.8,
+                       (0, 0, 0), 1)
+            cv.putText(img, 'length:' + str(round(self.support_length, 2)), (10, 290), cv.FONT_HERSHEY_COMPLEX, 0.8,
+                       (0, 0, 0), 1)
             return img
         else:
             img = cv.flip(img, 1)
@@ -87,6 +97,10 @@ class Leg(object):
                        (255, 255, 255), 1)
             cv.putText(img, 'cod2_angle:' + str(self.cod2_angle), (10, 90), cv.FONT_HERSHEY_COMPLEX, 0.8,
                        (255, 255, 255), 1)
+            cv.putText(img, 'height:' + str(round(self.root_height, 2)), (10, 260), cv.FONT_HERSHEY_COMPLEX, 0.8,
+                       (0, 0, 0), 1)
+            cv.putText(img, 'length:' + str(round(self.support_length, 2)), (10, 290), cv.FONT_HERSHEY_COMPLEX, 0.8,
+                       (0, 0, 0), 1)
             return img
 
 
@@ -131,11 +145,15 @@ class Spider(object):
             img = cv.circle(img, trans_cor_spi(support_point_list[i]), 3, blue, -1)
         return img
 
+    def move_spider(self, center_position, forward):
+        root_position_list = calculate_six_roots(center_position, forward)
+        for i in range(0, 6):
+            self.__dict__[f'Leg{i + 1}'].root_point = root_position_list[i]
+
 
 if __name__ == '__main__':
-    print(forward_kinematics(90, 0))
-    spider = Spider(trans_cor_spi([250, 250]), 90)
-    back_img = create_back_img(500, 500, grey)
-    img = spider.draw(back_img)
-    cv.imshow('test', img)
-    cv.waitKey(100000)
+    # spider = Spider(trans_cor_spi([250, 250]), 90)
+    back_img = create_back_img(300, 300, grey)
+    # img = spider.draw(back_img)
+    leg = Leg(1, [0, 0], [150, 0], 50, 90)
+    img = leg.draw(back_img)
