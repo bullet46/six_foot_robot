@@ -64,7 +64,7 @@ class ControllerThread(QThread):
                 pass
 
             if self.now_state == 'init':
-                QThread.msleep(50)
+                QThread.msleep(100)
                 self.update_spider_image()
                 self.update_all_foot_image()
                 self.log_update.emit('创建六足机器人对象成功', 'success')

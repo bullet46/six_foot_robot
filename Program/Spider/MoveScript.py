@@ -103,7 +103,7 @@ def turn_right_script(self, Spider: SpiderObject):
     change_support_state(self, 1)
     update_all(self)
 
-    for i in range(0, 12):
+    for i in range(0, 6):
         self.spider.move_spider([0, 0], self.spider.forward + 15)
         self.spider.Leg1.route_foot_point(-40,150)
         self.spider.Leg3.route_foot_point(-40,150)
@@ -128,7 +128,7 @@ def turn_left_script(self, Spider: SpiderObject):
     change_support_state(self, 1)
     update_all(self)
 
-    for i in range(0, 12):
+    for i in range(0, 6):
         self.spider.move_spider([0, 0], self.spider.forward - 15)
         self.spider.Leg1.route_foot_point(40, 150)
         self.spider.Leg3.route_foot_point(40, 150)
