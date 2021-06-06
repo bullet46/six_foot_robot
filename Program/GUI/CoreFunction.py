@@ -159,10 +159,11 @@ class ControllerThread(QThread):
     def update_joint_angle_to_message(self):
         joint_list = [0] * 18
         for i in range(1, 7):
-            joint_list[i - 1] = self.spider.__dict__[f'Leg{i}'].cod0_angle
+            joint_list[i - 1] = self.spider.__dict__[f'Leg{i}'].cod0_angle+self.spider.forward+45+60*i
+
             joint_list[i - 1 + 6] = self.spider.__dict__[f'Leg{i}'].cod1_angle
             joint_list[i - 1 + 12] = self.spider.__dict__[f'Leg{i}'].cod2_angle
-        self.log_update.emit(str(joint_list),'normal')
+        self.log_update.emit(str(joint_list), 'normal')
 
     def update_joint_angle(self):
         joint_list = [0] * 18

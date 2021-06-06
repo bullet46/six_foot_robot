@@ -1,8 +1,9 @@
 from Spider import SpiderObject
 import time
-
+from Library import caculater
 
 def update_all(self):
+    time.sleep(0.5)
     self.spider.calculate_all_cod()
     self.update_spider_image()
     self.update_all_foot_image()
@@ -101,12 +102,47 @@ def turn_right_script(self, Spider: SpiderObject):
     update_all(self)
     change_support_state(self, 1)
     update_all(self)
-    self.spider.move_spider([0, 0], self.spider.forward + 30)
-    update_all(self)
-    # for i in range(0, 12):
-    #     self.spider.move_spider([0, 0], self.spider.forward + 30)
-    #     update_all(self)
+
+    for i in range(0, 12):
+        self.spider.move_spider([0, 0], self.spider.forward + 15)
+        self.spider.Leg1.route_foot_point(-40,150)
+        self.spider.Leg3.route_foot_point(-40,150)
+        self.spider.Leg5.route_foot_point(-40,150)
+        update_all(self)
+        change_support_state(self, 0)
+        update_all(self)
+
+        self.spider.move_spider([0, 0], self.spider.forward + 15)
+        print(self.spider.center_position)
+        self.spider.Leg2.route_foot_point(-40,150)
+        self.spider.Leg4.route_foot_point(-40,150)
+        self.spider.Leg6.route_foot_point(-40,150)
+        update_all(self)
+
+        change_support_state(self, 1)
+        update_all(self)
 
 
 def turn_left_script(self, Spider: SpiderObject):
     update_all(self)
+    change_support_state(self, 1)
+    update_all(self)
+
+    for i in range(0, 12):
+        self.spider.move_spider([0, 0], self.spider.forward - 15)
+        self.spider.Leg1.route_foot_point(40, 150)
+        self.spider.Leg3.route_foot_point(40, 150)
+        self.spider.Leg5.route_foot_point(40, 150)
+        update_all(self)
+        change_support_state(self, 0)
+        update_all(self)
+
+        self.spider.move_spider([0, 0], self.spider.forward - 15)
+        print(self.spider.center_position)
+        self.spider.Leg2.route_foot_point(40, 150)
+        self.spider.Leg4.route_foot_point(40, 150)
+        self.spider.Leg6.route_foot_point(40, 150)
+        update_all(self)
+
+        change_support_state(self, 1)
+        update_all(self)

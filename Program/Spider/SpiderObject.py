@@ -50,6 +50,18 @@ class Leg(object):
         """
         self.support_point = [self.support_point[0] + forward_list[0], self.support_point[1] + forward_list[1]]
 
+    def route_foot_point(self, angle,length=None):
+        """
+        旋转移动足
+        """
+        if length is None:
+            length=self.support_length
+        else:
+            self.support_length = length
+
+        self.cod0_angle = self.cod0_angle + angle
+        self.support_point = calculate_foot_position(self.root_point,self.cod0_angle,length)
+
     def draw(self, back_img):
         """
         绘制侧视图,需要传参背景图片,应为300*300
