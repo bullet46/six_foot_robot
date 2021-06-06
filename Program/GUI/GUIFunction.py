@@ -1,6 +1,7 @@
 from GUI.MainWindow import Ui_MainWindow
 import time
 
+
 def error_decorator(func):
     """
     error汇报装饰器
@@ -14,6 +15,7 @@ def error_decorator(func):
             self.log_update.emit(repr(error), 'error')
 
     return error_emit
+
 
 class GUIFunction(Ui_MainWindow):
     def __init__(self):
@@ -34,3 +36,8 @@ class GUIFunction(Ui_MainWindow):
             self.textBrowser.append(text)
         except Exception as error:
             print(error)
+
+    @error_decorator
+    def update_all_angle(self, angle_list):
+        for i in range(1, 19):
+            self.__dict__[f'joint_{i}'].display(angle_list[i - 1])

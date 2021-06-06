@@ -6,6 +6,7 @@ from PyQt5.QtCore import *
 import cv2
 import numpy as np
 import time
+from Spider import MoveScript
 
 
 class CoreFunction(GUIFunction):
@@ -15,6 +16,7 @@ class CoreFunction(GUIFunction):
         self.controllerThread.log_update.connect(self.log_update)
         self.controllerThread.draw_foot.connect(self.draw_foot)
         self.controllerThread.draw_spider.connect(self.draw_spider)
+        self.controllerThread.update_joint.connect(self.update_all_angle)
         self.controllerThread.now_state = 'init'  # 创建一个全局变量，用于与控制线程的沟通
         self.controllerThread.start()
         self.forward.clicked.connect(self.forward_script)
@@ -49,6 +51,7 @@ class ControllerThread(QThread):
     draw_foot = pyqtSignal(int, QImage)
     draw_spider = pyqtSignal(QImage)
     log_update = pyqtSignal(str, str)
+    update_joint = pyqtSignal(list)
 
     def __init__(self):
         super(ControllerThread, self).__init__()
@@ -61,6 +64,7 @@ class ControllerThread(QThread):
                 pass
 
             if self.now_state == 'init':
+                QThread.msleep(50)
                 self.update_spider_image()
                 self.update_all_foot_image()
                 self.log_update.emit('创建六足机器人对象成功', 'success')
@@ -72,15 +76,31 @@ class ControllerThread(QThread):
             if self.now_state == 'forward':
                 self.log_update.emit('启动向前脚本', 'normal')
                 self.forward_script()
+                self.log_update.emit('运行完成', 'normal')
                 self.now_state = 'finish'
 
             if self.now_state == 'go_back':
+                self.log_update.emit('启动向后脚本', 'normal')
+                self.spider = Spider([500, 750], 90)
+                self.backward_script()
+                self.now_state = 'finish'
+                self.log_update.emit('运行完成', 'normal')
                 pass
 
             if self.now_state == 'turn_right':
+                self.log_update.emit('启动右转脚本', 'normal')
+                self.spider = Spider([500, 500], 90)
+                self.turn_right_script()
+                self.now_state = 'finish'
+                self.log_update.emit('运行完成', 'normal')
                 pass
 
             if self.now_state == 'turn_left':
+                self.log_update.emit('启动左转脚本', 'normal')
+                self.spider = Spider([500, 500], 90)
+                self.turn_left_script()
+                self.now_state = 'finish'
+                self.log_update.emit('运行完成', 'normal')
                 pass
 
             QThread.msleep(50)
@@ -105,11 +125,10 @@ class ControllerThread(QThread):
             img = cv2.resize(img, (160, 160))
             Qframes = self.opencv_to_Qframe(img)
             self.draw_foot.emit(order, Qframes)
-            QThread.msleep(50)
+            QThread.msleep(40)
 
     @error_decorator
     def update_spider_image(self):
-        QThread.msleep(50)
         background_img = create_back_img(1000, 1000, grey)
         img = self.spider.draw(background_img)
         img = cv2.resize(img, (520, 520))
@@ -117,55 +136,39 @@ class ControllerThread(QThread):
         self.draw_spider.emit(Qframes)
         QThread.msleep(200)
 
+    @error_decorator
     def forward_script(self):
-        self.spider.move_spider([500, 300], 90)
-        self.spider.Leg1.fixed_state = False
-        self.spider.Leg1.mov_support_point(0, 20)
-        self.spider.Leg1.calculate_cod(self.spider.Leg1.root_point, self.spider.Leg1.support_point, 30)
-        self.spider.Leg3.fixed_state = False
-        self.spider.Leg3.mov_support_point(0, 80)
-        self.spider.Leg3.calculate_cod(self.spider.Leg2.root_point, self.spider.Leg2.support_point, 30)
-        self.spider.Leg5.fixed_state = False
-        self.spider.Leg5.mov_support_point(0, 80)
-        self.spider.Leg5.calculate_cod(self.spider.Leg3.root_point, self.spider.Leg3.support_point, 30)
+        self.update_joint_angle()
+        MoveScript.forward_script(self, self.spider)
 
-        self.spider.Leg2.calculate_cod(self.spider.Leg2.root_point, self.spider.Leg2.support_point, 50)
-        self.spider.Leg4.calculate_cod(self.spider.Leg4.root_point, self.spider.Leg4.support_point, 50)
-        self.spider.Leg6.calculate_cod(self.spider.Leg6.root_point, self.spider.Leg6.support_point, 50)
-        self.update_all_foot_image()
-        self.update_spider_image()
+    @error_decorator
+    def backward_script(self):
+        self.update_joint_angle()
+        MoveScript.backward_script(self, self.spider)
 
-        QThread.msleep(300)
-        self.spider.move_spider([500, 300], 90)
-        self.spider.Leg1.fixed_state = True
-        self.spider.Leg1.calculate_cod(self.spider.Leg1.root_point, self.spider.Leg1.support_point, 50)
-        self.spider.Leg3.fixed_state = True
-        self.spider.Leg3.calculate_cod(self.spider.Leg2.root_point, self.spider.Leg2.support_point, 50)
-        self.spider.Leg5.fixed_state = True
-        self.spider.Leg5.calculate_cod(self.spider.Leg2.root_point, self.spider.Leg2.support_point, 50)
+    @error_decorator
+    def turn_right_script(self):
+        self.update_joint_angle()
+        MoveScript.turn_right_script(self, self.spider)
 
-        self.spider.Leg2.fixed_state = False
-        self.spider.Leg4.fixed_state = False
-        self.spider.Leg6.fixed_state = False
-        self.update_all_foot_image()
-        self.update_spider_image()
+    @error_decorator
+    def turn_left_script(self):
+        self.update_joint_angle()
+        MoveScript.turn_left_script(self, self.spider)
 
-        QThread.msleep(300)
-        self.spider.move_spider([500, 350], 90)
-        self.spider.Leg2.fixed_state = False
-        self.spider.Leg2.mov_support_point(0, 20)
-        self.spider.Leg2.calculate_cod(self.spider.Leg2.root_point, self.spider.Leg2.support_point, 30)
-        self.spider.Leg4.fixed_state = False
-        self.spider.Leg4.mov_support_point(0, 80)
-        self.spider.Leg4.calculate_cod(self.spider.Leg4.root_point, self.spider.Leg4.support_point, 30)
-        self.spider.Leg6.fixed_state = False
-        self.spider.Leg6.mov_support_point(0, 80)
-        self.spider.Leg6.calculate_cod(self.spider.Leg6.root_point, self.spider.Leg6.support_point, 30)
+    def update_joint_angle_to_message(self):
+        joint_list = [0] * 18
+        for i in range(1, 7):
+            joint_list[i - 1] = self.spider.__dict__[f'Leg{i}'].cod0_angle
+            joint_list[i - 1 + 6] = self.spider.__dict__[f'Leg{i}'].cod1_angle
+            joint_list[i - 1 + 12] = self.spider.__dict__[f'Leg{i}'].cod2_angle
+        self.log_update.emit(str(joint_list),'normal')
 
-        self.spider.Leg2.fixed_state = False
-        self.spider.Leg4.fixed_state = False
-        self.spider.Leg6.fixed_state = False
-        self.update_all_foot_image()
-        self.update_spider_image()
+    def update_joint_angle(self):
+        joint_list = [0] * 18
+        for i in range(1, 7):
+            joint_list[i - 1] = self.spider.__dict__[f'Leg{i}'].cod0_angle
+            joint_list[i - 1 + 6] = self.spider.__dict__[f'Leg{i}'].cod1_angle
+            joint_list[i - 1 + 12] = self.spider.__dict__[f'Leg{i}'].cod2_angle
 
-        pass
+        self.update_joint.emit(joint_list)
