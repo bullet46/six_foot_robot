@@ -1,6 +1,5 @@
-import math
-from Library.caculater import *
-from Spider.Config import *
+from Cilent.Library.caculater import *
+from Cilent.Spider.Config import *
 import cv2 as cv
 from math import *
 
@@ -50,17 +49,17 @@ class Leg(object):
         """
         self.support_point = [self.support_point[0] + forward_list[0], self.support_point[1] + forward_list[1]]
 
-    def route_foot_point(self, angle,length=None):
+    def route_foot_point(self, angle, length=None):
         """
         旋转移动足
         """
         if length is None:
-            length=self.support_length
+            length = self.support_length
         else:
             self.support_length = length
 
         self.cod0_angle = self.cod0_angle + angle
-        self.support_point = calculate_foot_position(self.root_point,self.cod0_angle,length)
+        self.support_point = calculate_foot_position(self.root_point, self.cod0_angle, length)
 
     def draw(self, back_img):
         """
@@ -121,6 +120,7 @@ class Spider(object):
         self.Leg4 = Leg(4, root_position_list[3], calculate_foot_position(root_position_list[3], 315, 150), 50, 315)
         self.Leg5 = Leg(5, root_position_list[4], calculate_foot_position(root_position_list[4], 225, 150), 50, 0)
         self.Leg6 = Leg(6, root_position_list[5], calculate_foot_position(root_position_list[5], 180, 150), 50, 45)
+        self.camera_position = add_position(center_position, [0, 70])
         # 有三种状态
         # 0状态为全部直立,
         # 1状态1,3,5关节支撑
@@ -145,6 +145,7 @@ class Spider(object):
             img = cv.line(img, trans_cor_spi(root_point_list[i]), trans_cor_spi(support_point_list[i]), line_color, 2)
             img = cv.circle(img, trans_cor_spi(root_point_list[i]), 3, blue, -1)
             img = cv.circle(img, trans_cor_spi(support_point_list[i]), 3, blue, -1)
+        img = cv.circle(img, trans_cor_spi(self.camera_position), 5, blue, 2)
         return img
 
     def move_spider(self, center_position_add, forward):
@@ -153,6 +154,7 @@ class Spider(object):
         root_position_list = calculate_six_roots(self.center_position, forward)
         for i in range(0, 6):
             self.__dict__[f'Leg{i + 1}'].root_point = root_position_list[i]
+        self.camera_position = root_position_list[6]
 
     def calculate_all_cod(self):
         for i in range(1, 7):

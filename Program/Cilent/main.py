@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication
-from GUI.launcher import Launcher
+from Cilent.GUI.launcher import Launcher
 
 # 用于启动QT应用
 if __name__ == '__main__':

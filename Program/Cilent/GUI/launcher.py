@@ -1,5 +1,4 @@
-from GUI.CoreFunction import *
-from GUI.GUIFunction import *
+from Cilent.GUI.CoreFunction import *
 
 
 class Launcher(CoreFunction):

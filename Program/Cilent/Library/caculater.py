@@ -3,8 +3,7 @@
 """
 from math import *
 import numpy as np
-import json
-from Spider.Config import *
+from Cilent.Spider.Config import *
 
 
 def line_distance(point_1: list, point_2: list):
@@ -33,7 +32,7 @@ def forward_kinematics(angle1, angle2):
     L1 = first_arm_length
     L2 = second_arm_length
     L0 = joint_between
-    x = L2 * sin(angle1) + L1 * cos(angle2) +L0
+    x = L2 * sin(angle1) + L1 * cos(angle2) + L0
     y = L2 * cos(angle2) - L1 * sin(angle1)
     return x, y
 
@@ -121,15 +120,16 @@ def create_back_img(x, y, bgr):
     return img
 
 
-def calculate_six_roots(position: list, forwards):  # 给定机器人中心位置，机器人面朝方向，计算机器人摄像头位置以及6个根节点坐标
+def calculate_six_roots(position: list, forwards):  # 给定机器人中心位置，机器人面朝方向，计算机器人6个根节点坐标以及摄像头位置
     forwards = forwards
-    original = np.array([[-58, 98], [58, 98],[88, 0], [58, -98], [-58, -98], [-88, 0], [-58, 98]])
+    original = np.array([[-58, 98], [58, 98], [88, 0], [58, -98], [-58, -98], [-88, 0], [0, 60]])
     trans = np.array([[cos(radians(forwards - 90)), sin(radians(forwards - 90))],
                       [cos(radians(forwards)), sin(radians(forwards))]], np.float64)  # 2*2的变换基底矩阵
     lists = []
-    for i in range(6):
+    for i in range(7):
         roots = list(np.inner(trans, original[i, :].T).astype(int))
         lists.append([roots[0] + position[0], roots[1] + position[1]])
+    print(lists)
     return lists
 
 

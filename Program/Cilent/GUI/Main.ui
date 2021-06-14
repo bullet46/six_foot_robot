@@ -161,71 +161,6 @@ background-color: rgb(85, 85, 127);
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="forward">
-    <property name="geometry">
-     <rect>
-      <x>1120</x>
-      <y>210</y>
-      <width>60</width>
-      <height>60</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>前进</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="turn_left">
-    <property name="geometry">
-     <rect>
-      <x>1040</x>
-      <y>290</y>
-      <width>60</width>
-      <height>60</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>左转</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="turn_right">
-    <property name="geometry">
-     <rect>
-      <x>1200</x>
-      <y>290</y>
-      <width>60</width>
-      <height>60</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>右转</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="back">
-    <property name="geometry">
-     <rect>
-      <x>1120</x>
-      <y>370</y>
-      <width>60</width>
-      <height>60</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>后退</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="stop">
-    <property name="geometry">
-     <rect>
-      <x>1120</x>
-      <y>290</y>
-      <width>60</width>
-      <height>60</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>停止</string>
-    </property>
-   </widget>
    <widget class="QTextBrowser" name="textBrowser">
     <property name="geometry">
      <rect>
@@ -591,6 +526,231 @@ background-color: rgb(85, 85, 127);
     </property>
     <property name="digitCount">
      <number>3</number>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>30</y>
+      <width>211</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>云台控制器</string>
+    </property>
+    <widget class="QSlider" name="PanControllerVertial">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>22</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>90</number>
+     </property>
+     <property name="value">
+      <number>45</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="PanControllerHorizon">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>200</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>180</number>
+     </property>
+     <property name="value">
+      <number>90</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="tickInterval">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ChangeDisplay">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>91</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>切换主窗口显示</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="AddYolo">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>250</y>
+       <width>91</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>启用Yolo检测</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ChangeDisplay_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>280</y>
+       <width>191</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>拍照 Space</string>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="PanVertialValue">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>40</y>
+       <width>50</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="digitCount">
+      <number>3</number>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="PanHorizonValue">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>170</y>
+       <width>50</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="digitCount">
+      <number>3</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>360</y>
+      <width>211</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>指令控制器</string>
+    </property>
+    <widget class="QPushButton" name="stop">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>70</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>停止P</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="turn_left">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>70</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>左转A</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="turn_right">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>70</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>右转D</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="back">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>120</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>后退S</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="forward">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>20</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>前进W</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTextBrowser" name="LinkDetector">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>10</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
     </property>
    </widget>
   </widget>
