@@ -43,10 +43,14 @@ class Leg(object):
         self.support_point[0] = self.root_point[0] + cos(radians(angle)) * length
         self.support_point[1] = self.root_point[1] + sin(radians(angle)) * length
 
-    def mov_foot_point(self, forward_list):
+    def mov_foot_point(self, forward_list, forward):
         """
         向前移动足
         """
+        center_position_add = np.array(forward_list)
+        trans = np.array([[cos(radians(forward - 90)), sin(radians(forward - 90))],
+                          [cos(radians(forward)), sin(radians(forward))]], np.float64)  # 2*2的变换基底矩阵
+        forward_list = list(np.inner(trans, center_position_add.T).astype(int))
         self.support_point = [self.support_point[0] + forward_list[0], self.support_point[1] + forward_list[1]]
 
     def route_foot_point(self, angle, length=None):
@@ -70,8 +74,8 @@ class Leg(object):
         else:
             leg_color = green
 
-        self.point0 = [240, 60 + 50]
-        self.point1 = [240 - joint_between, 60 + 50]
+        self.point0 = [240, 60 + DefaultHeight]
+        self.point1 = [240 - joint_between, 60 + DefaultHeight]
         self.point2 = [self.point1[0] - int(cos(radians(self.cod1_angle)) * first_arm_length),
                        self.point1[1] + int(sin(radians(self.cod1_angle)) * first_arm_length)]
         self.point3 = [self.point2[0] - int(sin(radians(self.cod2_angle)) * second_arm_length),
@@ -150,6 +154,11 @@ class Spider(object):
 
     def move_spider(self, center_position_add, forward):
         self.forward = forward
+        center_position_add = np.array(center_position_add)
+        trans = np.array([[cos(radians(forward - 90)), sin(radians(forward - 90))],
+                          [cos(radians(forward)), sin(radians(forward))]], np.float64)  # 2*2的变换基底矩阵
+        center_position_add = list(np.inner(trans, center_position_add.T).astype(int))
+
         self.center_position = add_position(center_position_add, self.center_position)
         root_position_list = calculate_six_roots(self.center_position, forward)
         for i in range(0, 6):

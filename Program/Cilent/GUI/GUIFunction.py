@@ -20,10 +20,21 @@ def error_decorator(func):
 class GUIFunction(Ui_MainWindow):
     def __init__(self):
         super(GUIFunction, self).__init__()
-
+        self.short_cut_bind()
         self.log_update("程序启动正常")
 
+    def short_cut_bind(self):
+        self.forward.setShortcut('w')
+        self.back.setShortcut('s')
+        self.turn_left.setShortcut('a')
+        self.turn_right.setShortcut('d')
+        self.stop.setShortcut('p')
+        self.TakePhoto.setShortcut(' ')
+
     def log_update(self, msg, state='normal'):
+        """
+        更新日志
+        """
         color_map = {
             'normal': 'black',
             'success': 'green',

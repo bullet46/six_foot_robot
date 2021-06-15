@@ -3,6 +3,9 @@ from Cilent.Spider.SpiderObject import Spider
 from Cilent.Library.caculater import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
+import os
+from Library.yolo import YOLO
+from PIL import Image
 import cv2
 from Cilent.Spider import MoveScript
 
@@ -26,6 +29,7 @@ class CoreFunction(GUIFunction):
         self.back.clicked.connect(self.back_script)
         self.turn_left.clicked.connect(self.turn_left_script)
         self.turn_right.clicked.connect(self.turn_right_script)
+        self.stop.clicked.connect(self.stop_script)
         self.ChangeDisplay.clicked.connect(self.change_display)
         self.AddYolo.clicked.connect(self.yolo_switch_script)
         # 图传线程控制
@@ -34,11 +38,13 @@ class CoreFunction(GUIFunction):
         self.VideoThread.link_state.connect(self.up_date_device_state)
         self.VideoThread.log_update.connect(self.log_update)
         self.VideoThread.start()
+        # 创建拍照文件夹
+        if os.path.exists('Photos') is not True:
+            os.mkdir('Photos')
 
     def change_display(self):
         if self.video_switch is False:
             self.video_switch = True
-
         else:
             self.video_switch = False
             self.controllerThread.update_spider_image()
@@ -80,6 +86,8 @@ class CoreFunction(GUIFunction):
         self.controllerThread.now_state = 'turn_left'
 
 
+
+
 class ControllerThread(QThread):
     draw_foot = pyqtSignal(int, QImage)
     draw_spider = pyqtSignal(QImage)
@@ -104,6 +112,9 @@ class ControllerThread(QThread):
                 self.now_state = 'finish'
 
             if self.now_state == 'stop':
+                self.log_update.emit('停止', 'normal')
+                self.stop_script()
+                self.now_state = 'finish'
                 pass
 
             if self.now_state == 'forward':
@@ -114,7 +125,7 @@ class ControllerThread(QThread):
 
             if self.now_state == 'go_back':
                 self.log_update.emit('启动向后脚本', 'normal')
-                self.spider = Spider([500, 750], 90)
+                # self.spider = Spider([500, 750], 90)
                 self.backward_script()
                 self.now_state = 'finish'
                 self.log_update.emit('运行完成', 'normal')
@@ -122,7 +133,7 @@ class ControllerThread(QThread):
 
             if self.now_state == 'turn_right':
                 self.log_update.emit('启动右转脚本', 'normal')
-                self.spider = Spider([500, 500], 90)
+                # self.spider = Spider([500, 500], 90)
                 self.turn_right_script()
                 self.now_state = 'finish'
                 self.log_update.emit('运行完成', 'normal')
@@ -130,7 +141,7 @@ class ControllerThread(QThread):
 
             if self.now_state == 'turn_left':
                 self.log_update.emit('启动左转脚本', 'normal')
-                self.spider = Spider([500, 500], 90)
+                # self.spider = Spider([500, 500], 90)
                 self.turn_left_script()
                 self.now_state = 'finish'
                 self.log_update.emit('运行完成', 'normal')
@@ -189,6 +200,11 @@ class ControllerThread(QThread):
         self.update_joint_angle()
         MoveScript.turn_left_script(self, self.spider)
 
+    @error_decorator
+    def stop_script(self):
+        self.update_joint_angle()
+        MoveScript.stop_script(self, self.spider)
+
     def update_joint_angle_to_message(self):
         joint_list = [0] * 18
         joint_bias_list = [135, 45, 0, 315, 225, 180]  # 原坐标系下的偏置
@@ -232,6 +248,10 @@ class VideoTransThread(QThread):
         return Qframe
 
     def run(self):
+        try:
+            self.yolo = YOLO()
+        except Exception as e:
+            print(e)
         while True:
             try:
                 src = f'http://{link_ip}:8080/?action=snapshot'
@@ -240,6 +260,15 @@ class VideoTransThread(QThread):
                 if ok:
                     self.link_state.emit(1)
                     img = cv2.resize(frame, (520, 520))
+                    if self.yolo_switch is True:
+                        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                        # 转变成Image
+                        frame = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                        # 转变成Image
+                        frame = Image.fromarray(np.uint8(frame))
+                        # 进行检测
+                        labels, img = self.yolo.detect_image(frame)
+                        img = np.array(img)
                     Qframes = self.opencv_to_Qframe(img)
                     self.draw_video.emit(Qframes)
             except Exception as e:

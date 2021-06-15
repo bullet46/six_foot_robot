@@ -610,7 +610,7 @@ background-color: rgb(85, 85, 127);
       <string>启用Yolo检测</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="ChangeDisplay_2">
+    <widget class="QPushButton" name="TakePhoto">
      <property name="geometry">
       <rect>
        <x>10</x>
