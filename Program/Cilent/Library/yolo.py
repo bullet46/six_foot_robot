@@ -29,8 +29,8 @@ class YOLO(object):
         "anchors_path": 'Library/model/yolo_anchors.txt',
         "classes_path": 'Library/model/coco_classes.txt',
         "model_image_size": (416, 416, 3),
-        "confidence": 0.5,
-        "iou": 0.5,
+        "confidence": 0.2,
+        "iou": 0.2,
         "cuda": True
     }
 

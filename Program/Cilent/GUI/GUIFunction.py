@@ -1,4 +1,4 @@
-from Cilent.GUI.MainWindow import Ui_MainWindow
+from GUI.MainWindow import Ui_MainWindow
 import time
 
 
@@ -30,6 +30,7 @@ class GUIFunction(Ui_MainWindow):
         self.turn_right.setShortcut('d')
         self.stop.setShortcut('p')
         self.TakePhoto.setShortcut(' ')
+        self.TakePhoto.clicked.connect(self.take_photo)
 
     def log_update(self, msg, state='normal'):
         """
@@ -63,4 +64,9 @@ class GUIFunction(Ui_MainWindow):
             text = """<font face="微软雅黑" size="6" color="green">连接正常</font>"""
         self.LinkDetector.setText(text)
 
-
+    def take_photo(self):
+        pix = self.SpiderImage.pixmap()
+        print(type(pix))
+        now_time = time.strftime("%Y_%m_%d_%H %M %S", time.localtime())
+        if self.video_switch is True:
+            pix.save(f'Photos/{now_time}.jpg', 'jpg', quality=100000)

@@ -241,7 +241,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "六足机器人客户端软件"))
         self.Foot_1Image.setText(_translate("MainWindow", "TextLabel"))
         self.Foot_6Image.setText(_translate("MainWindow", "TextLabel"))
         self.Foot_3Image.setText(_translate("MainWindow", "TextLabel"))

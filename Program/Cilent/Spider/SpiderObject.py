@@ -118,12 +118,12 @@ class Spider(object):
         self.center_position = center_position
         self.forward = forward
         # 创建六足对象
-        self.Leg1 = Leg(1, root_position_list[0], calculate_foot_position(root_position_list[0], 135, 150), 50, 135)
-        self.Leg2 = Leg(2, root_position_list[1], calculate_foot_position(root_position_list[1], 45, 150), 50, 180)
-        self.Leg3 = Leg(3, root_position_list[2], calculate_foot_position(root_position_list[2], 0, 150), 50, 225)
-        self.Leg4 = Leg(4, root_position_list[3], calculate_foot_position(root_position_list[3], 315, 150), 50, 315)
-        self.Leg5 = Leg(5, root_position_list[4], calculate_foot_position(root_position_list[4], 225, 150), 50, 0)
-        self.Leg6 = Leg(6, root_position_list[5], calculate_foot_position(root_position_list[5], 180, 150), 50, 45)
+        self.Leg1 = Leg(1, root_position_list[0], calculate_foot_position(root_position_list[0], 135, 150), 160, 135)
+        self.Leg2 = Leg(2, root_position_list[1], calculate_foot_position(root_position_list[1], 45, 150), 160, 180)
+        self.Leg3 = Leg(3, root_position_list[2], calculate_foot_position(root_position_list[2], 0, 150), 160, 225)
+        self.Leg4 = Leg(4, root_position_list[3], calculate_foot_position(root_position_list[3], 315, 150), 160, 315)
+        self.Leg5 = Leg(5, root_position_list[4], calculate_foot_position(root_position_list[4], 225, 150), 160, 0)
+        self.Leg6 = Leg(6, root_position_list[5], calculate_foot_position(root_position_list[5], 180, 150), 160, 45)
         self.camera_position = add_position(center_position, [0, 70])
         # 有三种状态
         # 0状态为全部直立,

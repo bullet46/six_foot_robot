@@ -27,8 +27,11 @@ brown = (0, 133, 205)
 grey_ground = (201, 201, 205)
 light_yellow = (224, 255, 255)
 brown_dark = (38, 71, 139)
-# 默认高度为80mm
-DefaultHeight = 80
+# 默认高度为160mm
+DefaultHeight = 160
 
 # Link_ip wifi控制地址
-link_ip = "192.168.0.112"
+link_ip = "192.168.1.2"
+
+# Debug_Mode 排错模式，不发送指令，用于验证
+Debug_Mode = False

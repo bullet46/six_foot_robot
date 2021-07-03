@@ -1,13 +1,14 @@
-from Cilent.GUI.GUIFunction import *
-from Cilent.Spider.SpiderObject import Spider
-from Cilent.Library.caculater import *
+from GUI.GUIFunction import *
+from Spider.SpiderObject import Spider
+from Library.caculater import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import os
+import requests
 from Library.yolo import YOLO
 from PIL import Image
 import cv2
-from Cilent.Spider import MoveScript
+from Spider import MoveScript
 
 
 class CoreFunction(GUIFunction):
@@ -41,12 +42,42 @@ class CoreFunction(GUIFunction):
         # 创建拍照文件夹
         if os.path.exists('Photos') is not True:
             os.mkdir('Photos')
+        # 云台滑动绑定
+        self.PanControllerHorizon.valueChanged.connect(self.horizon_changes)
+        self.PanControllerVertial.valueChanged.connect(self.vertical_change)
+        # 刷新目前值
+        self.horizon_changes()
+        self.vertical_change()
+
+    def horizon_changes(self):
+        self.PanHorizonValue.display(self.PanControllerHorizon.value())
+        parm = {
+            "cap_angle": str([self.PanControllerHorizon.value(), self.PanControllerVertial.value()])
+        }
+        if Debug_Mode is not True:
+            try:
+                requests.get("http://" + link_ip + ':9600', params=parm, timeout=2)
+            except Exception as e:
+                print(e)
+
+    def vertical_change(self):
+        self.PanVertialValue.display(self.PanControllerVertial.value())
+        parm = {
+            "cap_angle": str([self.PanControllerHorizon.value(), self.PanControllerVertial.value()])
+        }
+        if Debug_Mode is not True:
+            try:
+                requests.get("http://" + link_ip + ':9600', params=parm, timeout=2)
+            except Exception as e:
+                print(e)
 
     def change_display(self):
         if self.video_switch is False:
             self.video_switch = True
+            self.VideoThread.video_show = True
         else:
             self.video_switch = False
+            self.VideoThread.video_show = False
             self.controllerThread.update_spider_image()
 
     def yolo_switch_script(self):
@@ -86,8 +117,6 @@ class CoreFunction(GUIFunction):
         self.controllerThread.now_state = 'turn_left'
 
 
-
-
 class ControllerThread(QThread):
     draw_foot = pyqtSignal(int, QImage)
     draw_spider = pyqtSignal(QImage)
@@ -105,9 +134,11 @@ class ControllerThread(QThread):
                 pass
 
             if self.now_state == 'init':
-                QThread.msleep(100)
+                QThread.msleep(10)
                 self.update_spider_image()
                 self.update_all_foot_image()
+                self.update_joint_angle()
+                self.update_joint_angle_to_message()
                 self.log_update.emit('创建六足机器人对象成功', 'success')
                 self.now_state = 'finish'
 
@@ -147,7 +178,7 @@ class ControllerThread(QThread):
                 self.log_update.emit('运行完成', 'normal')
                 pass
 
-            QThread.msleep(50)
+            QThread.msleep(1)
 
     def opencv_to_Qframe(self, img):
         """
@@ -169,7 +200,7 @@ class ControllerThread(QThread):
             img = cv2.resize(img, (160, 160))
             Qframes = self.opencv_to_Qframe(img)
             self.draw_foot.emit(order, Qframes)
-            QThread.msleep(40)
+            QThread.msleep(20)
 
     @error_decorator
     def update_spider_image(self):
@@ -178,7 +209,7 @@ class ControllerThread(QThread):
         img = cv2.resize(img, (520, 520))
         Qframes = self.opencv_to_Qframe(img)
         self.draw_spider.emit(Qframes)
-        QThread.msleep(200)
+        QThread.msleep(120)
 
     @error_decorator
     def forward_script(self):
@@ -205,23 +236,38 @@ class ControllerThread(QThread):
         self.update_joint_angle()
         MoveScript.stop_script(self, self.spider)
 
+    @error_decorator
     def update_joint_angle_to_message(self):
         joint_list = [0] * 18
         joint_bias_list = [135, 45, 0, 315, 225, 180]  # 原坐标系下的偏置
         for i in range(1, 7):
             joint_list[i - 1] = (self.spider.__dict__[f'Leg{i}'].cod0_angle - joint_bias_list[i - 1] + (
                 self.spider.forward) % 360) % 360
-            joint_list[i - 1 + 6] = self.spider.__dict__[f'Leg{i}'].cod1_angle
-            joint_list[i - 1 + 12] = self.spider.__dict__[f'Leg{i}'].cod2_angle
-        self.log_update.emit(str(joint_list), 'normal')
+            joint_list[i - 1 + 6] = 90 - self.spider.__dict__[f'Leg{i}'].cod1_angle
+            joint_list[i - 1 + 12] = 180 - (self.spider.__dict__[f'Leg{i}'].cod1_angle - self.spider.__dict__[
+                f'Leg{i}'].cod2_angle + 90)
+        parm = {
+            "body_angle": str(joint_list)
+        }
 
+        self.log_update.emit(str(joint_list), 'normal')
+        if Debug_Mode is not True:
+            requests.get("http://" + link_ip + ':9600', params=parm, timeout=1)
+
+    @error_decorator
     def update_joint_angle(self):
         joint_list = [0] * 18
+        joint_bias_list = [135, 45, 0, 315, 225, 180]  # 原坐标系下的偏置
         for i in range(1, 7):
-            joint_list[i - 1] = self.spider.__dict__[f'Leg{i}'].cod0_angle
-            joint_list[i - 1 + 6] = self.spider.__dict__[f'Leg{i}'].cod1_angle
-            joint_list[i - 1 + 12] = self.spider.__dict__[f'Leg{i}'].cod2_angle
-
+            joint_list[i - 1] = (self.spider.__dict__[f'Leg{i}'].cod0_angle - joint_bias_list[i - 1] + (
+                self.spider.forward) % 360) % 360
+            joint_list[i - 1 + 6] = 90 - self.spider.__dict__[f'Leg{i}'].cod1_angle
+            joint_list[i - 1 + 12] = 180 - (self.spider.__dict__[f'Leg{i}'].cod1_angle - self.spider.__dict__[
+                f'Leg{i}'].cod2_angle + 90)
+        # 区分相反
+        joint_list[1] = 180 - joint_list[1]
+        joint_list[2] = 180 - joint_list[2]
+        joint_list[3] = 180 - joint_list[3]
         self.update_joint.emit(joint_list)
 
 
@@ -234,6 +280,7 @@ class VideoTransThread(QThread):
     def __init__(self):
         super(VideoTransThread, self).__init__()
         self.yolo_switch = False
+        self.video_show = False
 
     def opencv_to_Qframe(self, img):
         """
@@ -253,25 +300,26 @@ class VideoTransThread(QThread):
         except Exception as e:
             print(e)
         while True:
-            try:
-                src = f'http://{link_ip}:8080/?action=snapshot'
-                cap = cv2.VideoCapture(src)
-                ok, frame = cap.read()
-                if ok:
-                    self.link_state.emit(1)
-                    img = cv2.resize(frame, (520, 520))
-                    if self.yolo_switch is True:
-                        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-                        # 转变成Image
-                        frame = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-                        # 转变成Image
-                        frame = Image.fromarray(np.uint8(frame))
-                        # 进行检测
-                        labels, img = self.yolo.detect_image(frame)
-                        img = np.array(img)
-                    Qframes = self.opencv_to_Qframe(img)
-                    self.draw_video.emit(Qframes)
-            except Exception as e:
-                self.link_state.emit(0)
-                self.log_update.emit(str(e), 'error')
+            if self.video_show is True:
+                try:
+                    src = f'http://{link_ip}:8080/?action=snapshot'
+                    cap = cv2.VideoCapture(src)
+                    ok, frame = cap.read()
+                    if ok:
+                        self.link_state.emit(1)
+                        img = cv2.resize(frame, (520, 520))
+                        if self.yolo_switch is True:
+                            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                            # 转变成Image
+                            frame = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                            # 转变成Image
+                            frame = Image.fromarray(np.uint8(frame))
+                            # 进行检测
+                            labels, img = self.yolo.detect_image(frame)
+                            img = np.array(img)
+                        Qframes = self.opencv_to_Qframe(img)
+                        self.draw_video.emit(Qframes)
+                except Exception as e:
+                    self.link_state.emit(0)
+                    self.log_update.emit(str(e), 'error')
             QThread.msleep(int(1 / 24 * 1000))
